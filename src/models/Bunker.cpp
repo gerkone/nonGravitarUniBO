@@ -10,6 +10,5 @@ namespace bunker {
     alive = false;
   }
   void Bunker::fire() {
-    
   }
 }
