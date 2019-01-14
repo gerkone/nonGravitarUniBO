@@ -1,4 +1,3 @@
-
 #include "Player.hpp"
 
 namespace player{
