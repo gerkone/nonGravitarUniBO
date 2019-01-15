@@ -5,6 +5,9 @@
 #include <SFLM/Window.hpp>
 //notation: m_member : member of a structure/class
 //          l_member : longint
+
+const int FPS_CAP = 60;
+
 namespace window {
   class WindowManager(){
   public:

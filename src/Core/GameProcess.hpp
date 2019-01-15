@@ -13,9 +13,13 @@ namespace game {
     void HandleInput();
     void Update();
     void Render();
-    Window* GetWindow();
+    sf::Window* GetWindow();
+    sf::Time GetElapsed();
+    void RestartClock();
   private:
     Window m_window;
+    sf::Clock m_clock;  //clock utile per sapere tempo tra ogni refresh dello schermo, eseguire il gioco a velocità costante su ogni hardware
+    sf::Time m_elapsed;
     //istances of game objects
   };
 
