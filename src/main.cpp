@@ -22,20 +22,20 @@ const int MAX_VIEWS = 5; //schermate massime
 const int SCREEN_WIDTH = 440;
 const int SCREEN_HEIGHT = 300;
 
-const int VARIANCE = 30; //spostamento in pixel massimo tra gli estremi dei segmenti
-
-list <voxel_2d> terrain_gen(list <voxel_2d> vx, int seed, int start, int end)
+const int VARIANCE = 0.25; //ruvidità di scalo tra displacement tra passaggi successivi
+const float DISPLACEMENT = 0.5; // unità di spostamento (segs * displacement) in px rispetto al numero di segmenti
+list <voxel_2d> terrain_gen(list <voxel_2d> vx, int seed, int start, int end, int displ, int max)
 {
     if((start + 1) = end) { return vx;}
     else
     {
         int mid = (end - start) / 2;
-        list <voxel_2d> :: iterator id = vx.begin();
-        advance(id, mid);
         srand(seed);
-        id.y = id.y + floor((double) (rand()%2 - 1) * VARIANCE);
-        terrain_gen(vx, seed, start, mid);
-        terrain_gen(vx, seed, mid + 1, end);
+        voxel_2d tmp = voxel_2d( (end/max) * SCREEN_WIDTH, floor((double) (rand()%2 - 1) * VARIANCE) );
+        displ = VARIANCE * displ; // displacement scalato del fattore variance
+        vx.push_front(terrain_gen(tmp, seed, start, mid, displ, max)); // reiterazione sui lati sx e dx del segmento
+        vx.push_back(terrain_gen(tmp, seed, mid, end, displ, max));
+        return vx;
     }
 }
 
@@ -46,10 +46,6 @@ int main()
     for(int c = 0; c < rand()%MAX_VIEWS; c++)
     {
         seeds.push_back(rand());
-    }
-    for(int c = 0; c < SEGMENT_MIN + rand()%SEGMENT_LIMIT; c++)
-    {
-        voxels.push_back(new voxel_2d((c + 1) * SCREEN_WIDTH/segs), 150);  //setta i segmenti allineati, uno dopo l'altro
     }
 
     int r = rand();
@@ -81,3 +77,5 @@ int main()
     }
     return 0;
 }
+
+subject=Learn Code on Mobile With Dcoder
