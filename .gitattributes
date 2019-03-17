@@ -1,2 +1,2 @@
-* linguist-vendored
-*.cpp linguist-vendored=false
+static/* linguist-vendored
+static/*.cpp linguist-vendored=false
