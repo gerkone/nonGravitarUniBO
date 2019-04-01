@@ -1,0 +1,5 @@
+apri cmake 
+
+nel campo source code metti la path dove è contenuto questo readme.
+nel campo where to build bin metti dove vuoi.
+clicca configure poi generate.vai nel percorso dei bin, esegui cmake e ti tira fuori l'eseguibile myexec
