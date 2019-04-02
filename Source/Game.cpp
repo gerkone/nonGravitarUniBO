@@ -156,8 +156,9 @@ void Game::randomPlanetSpawn()
     //check for collision
     circle.setRadius(20);
     circle.setPosition(x,y);
+    circle.setOrigin(circle.getRadius(), circle.getRadius());
     sf::FloatRect rect = circle.getGlobalBounds();
-    bool check = checkPlanetsCollision(x, y) || collisionAircraft(rect);
+    bool check = checkPlanetsCollision(circle) || collisionAircraft(rect);
     if(!check){
       Ptr world(new World(x,y));
       mPlanetVector.push_back(std::move(world));
@@ -167,15 +168,29 @@ void Game::randomPlanetSpawn()
   }
 }
 
-bool Game::checkPlanetsCollision(float x, float y){
+bool Game::checkPlanetsCollision(sf::CircleShape shape){
+
   for(auto& planet : mPlanetVector){
-    float a_square = pow(planet->getCircle().getPosition().x - x, 2);
-    float b_square = pow(planet->getCircle().getPosition().y - y, 2);
-    if(sqrt(a_square + b_square) <= (planet->getCircle().getRadius()*2+RadiusDistance))
+    sf::Vector2f planet_global_coordinates = planet->getCircle().getPosition() + planet->getCircle().getOrigin();
+    sf::Vector2f shape_global_coordinates = shape.getPosition() + shape.getOrigin();
+    float a_square = pow(planet_global_coordinates.x - shape_global_coordinates.x, 2);
+    float b_square = pow(planet_global_coordinates.y - shape_global_coordinates.y, 2);
+    if(sqrt(a_square + b_square) <= shape.getRadius()*2 + RadiusDistance)
       return true;
   }
+
   return false;
+
 }
+// bool Game::checkPlanetsCollision(float x, float y){
+//   for(auto& planet : mPlanetVector){
+//     float a_square = pow(planet->getCircle().getPosition().x - x, 2);
+//     float b_square = pow(planet->getCircle().getPosition().y - y, 2);
+//     if(sqrt(a_square + b_square) <= (planet->getCircle().getRadius()*2+RadiusDistance))
+//       return true;
+//   }
+//   return false;
+// }
 
 bool Game::collisionAircraft(sf::FloatRect rect){
   sf::FloatRect aircraftRect = mPlayer.getGlobalBounds();

@@ -20,7 +20,7 @@ class Game : private sf::NonCopyable
     void addPlanet(float x, float y);
     void spawnPlanet();
     void randomPlanetSpawn();
-    bool checkPlanetsCollision(float x, float y);
+    bool checkPlanetsCollision(sf::CircleShape shape);
     bool collisionAircraft(sf::FloatRect rect);
 
   private:
