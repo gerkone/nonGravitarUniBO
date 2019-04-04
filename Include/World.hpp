@@ -3,6 +3,8 @@
 
 #include <SFML/Graphics.hpp>
 
+#include <fuel.hpp>
+
 #include <list>
 #include <time.h>
 #include <iostream>
@@ -18,6 +20,9 @@ const int SCREEN_HEIGHT = 500;
 const double VARIANCE = 0.55; //ruvidità di scalo tra displacement tra passaggi successivi
 const double DISPLACEMENT = 400; // unità di spostamento (segs * displacement) in px rispetto al numero di segmenti
 
+const int MAX_FUEL = 4; //numero di riformimenti che al massimo possono apparire su un pianeta
+const int MAX_BUNKERS = 5;  //numero di bunker che al massimo possono apparire su un pianeta
+
 struct voxel {
   float x;
   float y;
@@ -31,9 +36,16 @@ class World{
     sf::Vector2f getTerrain(int v);
     void nextView();
     void prevView();
+    int getNFuel();
+    Fuel* getSupply();
+    Fuel supply*; //array carburante presente sul pianeta, da accedere direttamente quando si preleva
+    int getHeight(int x); //ritorna la y relativa ad una data x (pixel), sul terreno attualmente memorizzato. per disegnare i fuel/bunker
   private:
     sf::CircleShape mPlanet;
     sf::Vector2f vx*;
+
+    int nFuel;  //quantità di riformimenti presenti
+
     int seeds*;
     int views;
     int itV;  //iteratore per la view corrente
