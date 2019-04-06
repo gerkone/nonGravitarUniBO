@@ -33,6 +33,6 @@ void Fuel::setY(float offY) {
   mFuel.move(o, offY - FUEL_HEIGHT);  //- FUEL_HEIGHT per mantenerlo al di sopra del terreno
 }
 
-int getView() {
+int Fuel::getView() {
   return onView;
 }
