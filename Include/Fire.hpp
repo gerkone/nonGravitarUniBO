@@ -13,14 +13,14 @@ const int TRIPLE_ANGLE_STEP = 30; //angolo tra i tre bullet del bunker triplo
 enum FireMode
 {
   Player, //riservato al player -> firingAngle= 270; fireStep = min; isEnemy = false
-  Vertical, //bunker standard -> firingAngle= 90; fireStep = 4*min; isEnemy = true
+  Single, //bunker standard -> firingAngle= 90; fireStep = 4*min; isEnemy = true
   Triple  //bunker triplo -> firingAngle= 60,90,120; fireStep = 8*min; isEnemy = true
 };
 
 
 class Fire{
   public:
-    Fire(FireMode mode);
+    Fire(FireMode mode, float speed);
     list<Bullet> getBullets();
     void updateBullets(); //aggiorna la lista dei bullet rimuovendo quelli usciti dalla finestra/che hanno colpito; la gestione delle collisioni e il calo della vita è fatto nella classe game
     bool isEnemy();
@@ -28,6 +28,7 @@ class Fire{
     int getFireStep();
     int getFiringAngle();
     void setPosition(float x, float y);
+    void shoot();
   private:
     list<Bullet> bullets;
     FireMode fireMode;
@@ -38,6 +39,7 @@ class Fire{
     bool isEnemy;   //chi possiede l'istanza
     int fireStep;   //tempo tra un colpo e l'altro
     int firingAngle;  //angolo a cui vengono inizializzati i bullet sparati
+    float speed;  //velocita' a cui si muovono i proiettili
 };
 
 #endif //FIRE_HPP

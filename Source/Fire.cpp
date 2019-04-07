@@ -1,15 +1,15 @@
 #include <Fire.hpp>
 
-Fire::Fire(FireMode mode) {
+Fire::Fire(FireMode mode, float speed, float x, float y) {
   fireMode = mode;
   switch (mode)
   {
     case Player: firingAngle = 270; fireStep = MIN_FIRESTEP; isEnemy = false; break;
-    case Vertical: firingAngle= 90; fireStep = 4*MIN_FIRESTEP; isEnemy = true; break;
-    case Triple: firingAngle = 90; fireStep = 8*MIN_FIRESTEP; isEnemy = true; break;
+    case Single: firingAngle = 90; fireStep = MIN_FIRESTEP; isEnemy = true; break;
+    case Triple: firingAngle = 90; fireStep = MIN_FIRESTEP; isEnemy = true; break;
   }
-  fx = 0;
-  fy = 0;
+  fx = x;
+  fy = y;
 }
 
 void updateBullets() {
@@ -20,6 +20,20 @@ void updateBullets() {
     } else {
       it++;
     }
+  }
+}
+
+void shoot() {
+  if ((fireMode == Player) || (fireMode == Single)) {
+    Bullet tmp = Bullet(fx, fy, firingAngle, isEnemy, fireStep/10);
+    bullets.push_back(tmp);
+  } else if(fireMode == Triple) {
+    Bullet tmp1 = Bullet(fx, fy, firingAngle, isEnemy, fireStep/10);
+    Bullet tmp2 = Bullet(fx, fy, firingAngle - TRIPLE_ANGLE_STEP, isEnemy, fireStep/10);  //aggiunti due bullets inclinati
+    Bullet tmp3 = Bullet(fx, fy, firingAngle + TRIPLE_ANGLE_STEP, isEnemy, fireStep/10);
+    bullets.push_back(tmp1);
+    bullets.push_back(tmp2);
+    bullets.push_back(tmp3);
   }
 }
 

@@ -20,7 +20,7 @@ class Bunker{
   private:
     sf::CircleShape mBunker;
     // FireMode fireMode;
-    bool isActive;
+    bool active;
     int hitpoints; //quanti colpi riesce a sopportare il bunker
     int onView; //tiene la parte del pianeta su cui apparirà il bunker
 };

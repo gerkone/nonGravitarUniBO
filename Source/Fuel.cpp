@@ -9,11 +9,19 @@ Fuel::Fuel(float x, float y, int v) {
   srand(time(0));
   if(rand()%2 > 1) {  //estratta dimensione/colore del carburante
     mFuel.setOutlineColor(sf::Color::Orange);
-    capacity = FUEL1;
+    capacity = FUEL_SMALL;
   } else {
     mFuel.setOutlineColor(sf::Color::Red);
-    capacity = FUEL2;
+    capacity = FUEL_BIG;
   }
+}
+
+float getY() {
+  return mFuel.getPosition().y;
+}
+
+float getX() {
+  return mFuel.getPosition().x;
 }
 
 sf::RectangleShape Fuel::getRectangle() {
@@ -26,7 +34,7 @@ int Fuel::getFuel() {
 }
 
 bool Fuel::isActive() {
-  return isActive;
+  return active;
 }
 
 void Fuel::setY(float offY) {

@@ -25,7 +25,7 @@ int Bunker::getFireMode() {
 }
 
 bool Bunker::isActive() {
-  return isActive;
+  return active;
 }
 
 int Bunker::hit(int hp) {
