@@ -1,92 +1,96 @@
 #include <World.hpp>
+#include <iostream>
+#include <time.h>
 
-World::World(float x, float y){
-  mPlanet.setRadius(20);
-  mPlanet.setOutlineColor(sf::Color::Red);
-  mPlanet.setOutlineThickness(5);
-  mPlanet.setPosition(x,y);
+const int World::SEGMENT_LIMIT = 512;
+const int World::MAX_VIEWS = 5;
+const int World::MIN_VIEWS = 3;
+const float World::VARIANCE = 0.65;
+const float World::DISPLACEMENT = 200;
 
-  srand(time(0));
-  views = rand()%(MAX_VIEWS - MIN_VIEWS) + MIN_VIEWS; //inizializzazione terreno
-  vx = new sf::Vector2f[SEGMENT_LIMIT];
-  seeds = new int[views];
-  for(int c = 0; c < views; c++)
+
+
+World::World(float x, float y, const sf::RenderWindow& Window)
+ : mWindow(Window)
+ , mTerrain(sf::LineStrip, SEGMENT_LIMIT)
+ , vx(nullptr)
   {
-      seeds[c] = rand()%1337;
-  }
-  for(int c = 0; c < SEGMENT_LIMIT; c++) {
-    vx[c] = ((float) ((SCREEN_WIDTH/SEGMENT_LIMIT) * c), (float) 0);
-  }
+    mPlanet.setRadius(20);
+    mPlanet.setOutlineColor(sf::Color::Red);
+    mPlanet.setOutlineThickness(5);
+    mPlanet.setPosition(x,y);
+    srand(time(0));
+    int view = rand() % (MAX_VIEWS - MIN_VIEWS) + MIN_VIEWS;
+    vx = new voxel[SEGMENT_LIMIT];
+    for (size_t i = 0; i < SEGMENT_LIMIT - 1; i++) {
+      vx[i].x = i * (mWindow.getSize().x / (double)SEGMENT_LIMIT);
+      vx[i].y = 0;
+    }
+    vx[SEGMENT_LIMIT - 1].x = mWindow.getSize().x;
+    for (size_t i = 0; i < view; i++) {
+      mSeeds.push_back(rand());
+    }
 
-  nFuel = rand()%MAX_FUEL;    //inizializzazione fuel array
-  supply = new Fuel[nFuel];
-  for(int i = 0; i< nFuel; i++) {
-    supply[i] = Fuel(rand()%SCREEN_WIDTH, 0, rand()%views);
+    mIterator = mSeeds.begin();
+
   }
-}
 
 sf::CircleShape World::getCircle(){
   return mPlanet;
 }
 
-int world::getNFuel() {
-  return nFuel;
-}
-
-list<Fuel> World::getSupply() {
-  list<Fuel> ret;
-  for(int i = 0; i < nFuel; i++) {
-    if (supply[i].isActive()) {
-      ret.push_back(supply[i]);
-    }
+//recursive midpoint displacement terrain generation
+void World::voxel_gen(int start, int end, float displacement){
+  if(start + 1 >= end ){
+    return;
   }
-  return ret;
+  else{
+    int mid = (end + start) / 2;
+    double rnd = (rand() / (double)RAND_MAX) - 0.5;
+    float offset = displacement * rnd;
+    vx[mid].y = ((vx[start].y + vx[end].y) / (double)2) + offset;
+    displacement = displacement * VARIANCE;
+    voxel_gen(start, mid, displacement);
+    voxel_gen(mid, end, displacement);
+  }
 }
 
-void World::nextView() {
-  itV = (itV + 1) % views;
+void World::test(){
+  std::cout << "voxel after init : " << '\n';
+  for (size_t i = 0; i < SEGMENT_LIMIT; i++) {
+    std::cout << "\t" << "x : " << vx[i].x << "y : " << vx[i].y << '\n';
+  }
 }
 
+// int World::getSegmentLimit(){
+//   return SEGMENT_LIMIT;
+// }
+//
+// float World::getDisplacement(){
+//   return DISPLACEMENT;
+// }
 
-void World::prevView() {
-  itV = (itV - 1) % views;
+void World::terrainGenerator(){
+  srand(*mIterator);
+  vx[0].y = mWindow.getSize().y /2 - 200;//should be a costant
+  vx[SEGMENT_LIMIT-1].y = mWindow.getSize().y / 2 - 200;
+  double displacement = DISPLACEMENT * VARIANCE;
+  voxel_gen(0, SEGMENT_LIMIT-1, displacement);
+  for (size_t i = 0; i < SEGMENT_LIMIT; i++) {
+    mTerrain[i].position = sf::Vector2f(vx[i].x, mWindow.getSize().y - vx[i].y);
+  }
 }
 
-sf::Vector2f* World::getTerrain() {
-  // try {
-    srand(seeds[itV]);
-    terrainGen();
-    return vx;
-  // } catch {
-  //
+sf::VertexArray World::getTerrain(){
+  return mTerrain;
+}
+
+void World::debugging() {
+  // std::cout << "current seed : " << *mIterator << '\n';
+  // std::cout << "all seeds in the list : ";
+  // for(auto x : mSeeds){
+  //   std::cout << " " << x;
   // }
-}
-
-void World::terrainGen(int start = 0, int end = SEGMENT_LIMIT, double displ = DISPLACEMENT) {
-  if(start + 1 >= end) {}
-  else
-  {
-      int mid = (end + start) / 2;
-      double rnd = ((double) rand()/(RAND_MAX)) - 0.5;
-      float offset = displ * rnd;
-      vx[mid].y = (vx[start].y + vx[end].y)/2 + offset;
-      displ = VARIANCE * displ; // displacement scalato del fattore variance
-      terrainGen(vx, start, mid, displ); // reiterazione sui lati sx e dx del segmento
-      terrainGen(vx, mid, end, displ);
-  }
-}
-
-float World::getHeight(int x) {
-  if ((vx == nullptr) || (x > SCREEN_WIDTH) || (x < 0)) {
-    return 0;
-  } else {
-    float retY = 0;
-    while((i < SEGMENT_LIMIT) && (retY == 0)){
-      if((vx[i].x > x - 10) && (vx[i].x < x + 10)) {  //vx[i] e' contenuto in un range accettabile di pixel
-        retY = vx[i].y;
-      }
-      i++;
-    }
-    return retY;
-  }
+  terrainGenerator();
+  test();
 }

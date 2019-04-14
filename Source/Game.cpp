@@ -8,9 +8,12 @@ const float Game::PlayerSpeed = 100.f;
 const sf::Time Game::TimePerFrame = sf::seconds(1.f/60.f);
 const float Game::BorderDistance = 50.f;
 const float Game::RadiusDistance = 50.f;
+const int Game::VIDEO_WIDTH = 1280;
+const int Game::VIDEO_HEIGHT = 720;
+const int Game::MaxPlanet = 10;
 
 Game::Game()
-: mWindow(sf::VideoMode(1280,720), "NonGravitar", sf::Style::Close)
+: mWindow(sf::VideoMode(VIDEO_WIDTH,VIDEO_HEIGHT), "NonGravitar", sf::Style::Close)
 , mTexture()
 , mPlayer()
 , mFont()
@@ -22,6 +25,8 @@ Game::Game()
 , mIsMovingLeft(false)
 , mIsMovingRight(false)
 , mPlanetVector()
+, mState(gameState::universe)
+, mCurrentPlanet(nullptr)
  {
     if(!mTexture.loadFromFile("Media/Textures/Eagle.png")){
       mWindow.close();
@@ -92,9 +97,17 @@ void Game::update(sf::Time elapsedTime)
     movement.x -= PlayerSpeed;
   if(mIsMovingRight)
     movement.x += PlayerSpeed;
-  for(auto& x : mPlanetVector){
-    if(collisionAircraft(x->getCircle().getGlobalBounds()))
-      std::cout << "collision detected";
+
+  if(mState == gameState::universe){
+    for(auto& x : mPlanetVector){
+      if(collisionAircraft(x->getCircle().getGlobalBounds())){
+        mState = gameState::inWorld;
+        mCurrentPlanet = x.get();
+        mCurrentPlanet->terrainGenerator();
+        mPlayer.setPosition(mWindow.getSize().x/2, 100);
+        mPlayer.rotate(180.f);
+      }
+    }
   }
 
   mPlayer.move(movement * elapsedTime.asSeconds());
@@ -105,9 +118,15 @@ void Game::render()
   mWindow.clear();
   mWindow.draw(mPlayer);
   mWindow.draw(mStatisticsText);
+  if (mState == gameState::universe){
   //unique_ptr can't be copied only way to iterate is with reference
-  for(auto& x : mPlanetVector){
-    mWindow.draw(x->getCircle());
+    for(auto& x : mPlanetVector){
+      mWindow.draw(x->getCircle());
+    }
+  }
+  else{
+    mWindow.draw(mCurrentPlanet->getTerrain());
+    //mCurrentPlanet->debugging();
   }
   mWindow.display();
 }
@@ -143,7 +162,7 @@ void Game::handlePlayerInput(sf::Keyboard::Key key, bool isPressed)
 
 void Game::randomPlanetSpawn()
 {
-  int i = rand() % 10 +1;
+  int i = rand() % MaxPlanet + 1; //spawn atleast one planet
   int k = 0;
   sf::CircleShape circle;
   while(k < i){
@@ -160,11 +179,10 @@ void Game::randomPlanetSpawn()
     sf::FloatRect rect = circle.getGlobalBounds();
     bool check = checkPlanetsCollision(circle) || collisionAircraft(rect);
     if(!check){
-      Ptr world(new World(x,y));
+      Ptr world(new World(x,y, mWindow));
       mPlanetVector.push_back(std::move(world));
       k++;
     }
-    std::cout << k;
   }
 }
 
@@ -182,15 +200,6 @@ bool Game::checkPlanetsCollision(sf::CircleShape shape){
   return false;
 
 }
-// bool Game::checkPlanetsCollision(float x, float y){
-//   for(auto& planet : mPlanetVector){
-//     float a_square = pow(planet->getCircle().getPosition().x - x, 2);
-//     float b_square = pow(planet->getCircle().getPosition().y - y, 2);
-//     if(sqrt(a_square + b_square) <= (planet->getCircle().getRadius()*2+RadiusDistance))
-//       return true;
-//   }
-//   return false;
-// }
 
 bool Game::collisionAircraft(sf::FloatRect rect){
   sf::FloatRect aircraftRect = mPlayer.getGlobalBounds();
