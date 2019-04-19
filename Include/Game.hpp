@@ -30,6 +30,7 @@ class Game : private sf::NonCopyable
     void randomPlanetSpawn();
     bool checkPlanetsCollision(sf::CircleShape shape);
     bool collisionAircraft(sf::FloatRect rect);
+    void adaptPlayerPosition();
 
   private:
 

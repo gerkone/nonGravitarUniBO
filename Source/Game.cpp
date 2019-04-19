@@ -81,6 +81,7 @@ void Game::update(sf::Time elapsedTime)
   mPlayer.update(elapsedTime);
 
   if(mState == gameState::universe){
+    adaptPlayerPosition();
     for(auto& x : mPlanetVector){
       if(collisionAircraft(x->getCircle().getGlobalBounds())){
         mState = gameState::inWorld;
@@ -176,4 +177,18 @@ bool Game::collisionAircraft(sf::FloatRect rect){
     return true;
   else
     return false;
+}
+
+void Game::adaptPlayerPosition(){
+  const float distance = 10.f;
+  sf::Vector2f position = mPlayer.getPosition();
+  float width = mPlayer.getLocalBounds().width;
+  float height = mPlayer.getLocalBounds().height;
+  auto view = mWindow.getSize();
+  std::cout << width << " " << height;
+  position.x = std::max(position.x, distance);
+  position.x = std::min(position.x, view.x - distance - width);
+  position.y = std::max(position.y, distance);
+  position.y = std::min(position.y, view.y - distance - height);
+  mPlayer.setPosition(position.x, position.y);
 }

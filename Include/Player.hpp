@@ -19,6 +19,7 @@ class Player {
     void move(sf::Time elapsedTime);//translate the aircrafr
     void rotate(float rotation);
     void update(sf::Time elapsedTime);//update the vector used to translate the aircraft
+    sf::FloatRect getLocalBounds();
 
   private:
     sf::RenderWindow& mWindow;

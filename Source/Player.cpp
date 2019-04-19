@@ -1,6 +1,6 @@
 #include <Player.hpp>
 
-const float Player::PlayerSpeed = 100.f;
+const float Player::PlayerSpeed = 200.f;
 
 Player::Player(std::string texturePath, sf::RenderWindow& window)
 : mWindow(window)
@@ -81,4 +81,8 @@ void Player::update(sf::Time elapsedTime){
   if(mIsMovingRight)
     mMovement.x += PlayerSpeed;
 
+}
+
+sf::FloatRect Player::getLocalBounds(){
+  return mPlayer.getLocalBounds();
 }
