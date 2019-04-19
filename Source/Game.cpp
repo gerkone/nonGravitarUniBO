@@ -4,7 +4,6 @@
 #include <cstdlib>
 #include <cmath>
 
-const float Game::PlayerSpeed = 100.f;
 const sf::Time Game::TimePerFrame = sf::seconds(1.f/60.f);
 const float Game::BorderDistance = 50.f;
 const float Game::RadiusDistance = 50.f;
@@ -14,26 +13,16 @@ const int Game::MaxPlanet = 10;
 
 Game::Game()
 : mWindow(sf::VideoMode(VIDEO_WIDTH,VIDEO_HEIGHT), "NonGravitar", sf::Style::Close)
-, mTexture()
-, mPlayer()
 , mFont()
 , mStatisticsText()
 , mStatisticsNumFrames(0)
 , mStatisticsUpdateTime()
-, mIsMovingUp(false)
-, mIsMovingDown(false)
-, mIsMovingLeft(false)
-, mIsMovingRight(false)
 , mPlanetVector()
 , mState(gameState::universe)
 , mCurrentPlanet(nullptr)
- {
-    if(!mTexture.loadFromFile("Media/Textures/Eagle.png")){
-      mWindow.close();
-    }
+, mPlayer("Media/Textures/Eagle.png", mWindow)
+{
     srand(time(NULL));
-    mPlayer.setTexture(mTexture);
-    mPlayer.setPosition(100.f, 100.f);
 
     mFont.loadFromFile("Media/Sansation.ttf");
     mStatisticsText.setFont(mFont);
@@ -74,10 +63,10 @@ void Game::proccessEvents()
     switch(event.type)
     {
       case sf::Event::KeyPressed:
-        handlePlayerInput(event.key.code, true);
+        mPlayer.handlePlayerInput(event.key.code, true);
         break;
       case sf::Event::KeyReleased:
-        handlePlayerInput(event.key.code, false);
+        mPlayer.handlePlayerInput(event.key.code, false);
         break;
       case sf::Event::Closed:
         mWindow.close();
@@ -88,15 +77,8 @@ void Game::proccessEvents()
 
 void Game::update(sf::Time elapsedTime)
 {
-  sf::Vector2f movement(0.f, 0.f);
-  if(mIsMovingUp)
-    movement.y -= PlayerSpeed;
-  if(mIsMovingDown)
-    movement.y += PlayerSpeed;
-  if(mIsMovingLeft)
-    movement.x -= PlayerSpeed;
-  if(mIsMovingRight)
-    movement.x += PlayerSpeed;
+
+  mPlayer.update(elapsedTime);
 
   if(mState == gameState::universe){
     for(auto& x : mPlanetVector){
@@ -110,13 +92,13 @@ void Game::update(sf::Time elapsedTime)
     }
   }
 
-  mPlayer.move(movement * elapsedTime.asSeconds());
+  mPlayer.move(elapsedTime);
 }
 
 void Game::render()
 {
   mWindow.clear();
-  mWindow.draw(mPlayer);
+  mPlayer.draw();
   mWindow.draw(mStatisticsText);
   if (mState == gameState::universe){
   //unique_ptr can't be copied only way to iterate is with reference
@@ -145,19 +127,6 @@ void Game::updateStatistics(sf::Time elapsedTime)
     mStatisticsNumFrames = 0;
 
   }
-}
-
-void Game::handlePlayerInput(sf::Keyboard::Key key, bool isPressed)
-{
-
-  if (key == sf::Keyboard::W)
-    mIsMovingUp = isPressed;
-  else if(key == sf::Keyboard::S)
-    mIsMovingDown = isPressed;
-  else if(key == sf::Keyboard::A)
-    mIsMovingLeft = isPressed;
-  else if(key == sf::Keyboard::D)
-    mIsMovingRight = isPressed;
 }
 
 void Game::randomPlanetSpawn()
