@@ -81,6 +81,7 @@ void Game::update(sf::Time elapsedTime)
   mPlayer.update(elapsedTime);
 
   if(mState == gameState::universe){
+    mPlayer.move(elapsedTime);
     adaptPlayerPosition();
     for(auto& x : mPlanetVector){
       if(collisionAircraft(x->getCircle().getGlobalBounds())){
@@ -88,12 +89,15 @@ void Game::update(sf::Time elapsedTime)
         mCurrentPlanet = x.get();
         mCurrentPlanet->terrainGenerator();
         mPlayer.setPosition(mWindow.getSize().x/2, 100);
-        mPlayer.rotate(180.f);
+        mPlayer.setRotation(180.f);
       }
     }
   }
+  if(mState == gameState::inWorld){
+    changeWorldView();
+    mPlayer.move(elapsedTime);
+  }
 
-  mPlayer.move(elapsedTime);
 }
 
 void Game::render()
@@ -185,10 +189,32 @@ void Game::adaptPlayerPosition(){
   float width = mPlayer.getLocalBounds().width;
   float height = mPlayer.getLocalBounds().height;
   auto view = mWindow.getSize();
-  std::cout << width << " " << height;
   position.x = std::max(position.x, distance);
   position.x = std::min(position.x, view.x - distance - width);
   position.y = std::max(position.y, distance);
   position.y = std::min(position.y, view.y - distance - height);
   mPlayer.setPosition(position.x, position.y);
+}
+
+void Game::changeWorldView(){
+  sf::Vector2f position = mPlayer.getPosition();
+  float width = mPlayer.getLocalBounds().width;
+  float height = mPlayer.getLocalBounds().height;
+  auto view = mWindow.getSize();
+  if(position.x > view.x){//right border
+    mPlayer.setPosition(width, position.y);
+    mCurrentPlanet->nextView();
+  }
+  else if(position.x - width < 0){//left border
+    mPlayer.setPosition(view.x, position.y);
+    mCurrentPlanet->preView();
+  }
+  else if(position.y < 0){
+    mState = gameState::universe;
+    mPlayer.setRotation(0);
+    mPlayer.setPosition(mCurrentPlanet->getCircle().getPosition().x - 100, mCurrentPlanet->getCircle().getPosition().y - 100);
+    //mPlayer.setPosition(100.f, 100.f);
+    mCurrentPlanet = nullptr;
+
+  }
 }

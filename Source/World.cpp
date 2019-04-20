@@ -19,7 +19,7 @@ World::World(float x, float y, const sf::RenderWindow& Window)
     mPlanet.setOutlineColor(sf::Color::Red);
     mPlanet.setOutlineThickness(5);
     mPlanet.setPosition(x,y);
-    srand(time(0));
+    //srand(time(0));
     int view = rand() % (MAX_VIEWS - MIN_VIEWS) + MIN_VIEWS;
     vx = new voxel[SEGMENT_LIMIT];
     for (size_t i = 0; i < SEGMENT_LIMIT - 1; i++) {
@@ -86,11 +86,21 @@ sf::VertexArray World::getTerrain(){
 }
 
 void World::debugging() {
-  // std::cout << "current seed : " << *mIterator << '\n';
-  // std::cout << "all seeds in the list : ";
-  // for(auto x : mSeeds){
-  //   std::cout << " " << x;
-  // }
+  std::cout << "current seed : " << *mIterator << '\n';
+  std::cout << "all seeds in the list : ";
+  for(auto x : mSeeds){
+    std::cout << " " << x;
+  }
+  // terrainGenerator();
+  // test();
+}
+
+void World::nextView(){
+  mIterator++;
   terrainGenerator();
-  test();
+}
+
+void World::preView(){
+  mIterator--;
+  terrainGenerator();
 }

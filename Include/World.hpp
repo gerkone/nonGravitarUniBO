@@ -23,6 +23,8 @@ class World{
     //used for debugging
     void debugging();
     void terrainGenerator();//initialize the VertexArray
+    void nextView();
+    void preView();
 
 
   private:

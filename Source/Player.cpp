@@ -65,8 +65,8 @@ void Player::move(sf::Time elapsedTime){
   mPlayer.move(mMovement * elapsedTime.asSeconds());
 }
 
-void Player::rotate(float rotation){
-  mPlayer.rotate(rotation);
+void Player::setRotation(float rotation){
+  mPlayer.setRotation(rotation);
 }
 
 void Player::update(sf::Time elapsedTime){

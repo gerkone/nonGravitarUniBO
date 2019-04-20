@@ -17,7 +17,7 @@ class Player {
     sf::Vector2f getPosition();
     sf::FloatRect getGlobalBounds();
     void move(sf::Time elapsedTime);//translate the aircrafr
-    void rotate(float rotation);
+    void setRotation(float rotation);
     void update(sf::Time elapsedTime);//update the vector used to translate the aircraft
     sf::FloatRect getLocalBounds();
 
