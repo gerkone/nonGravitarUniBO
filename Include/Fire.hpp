@@ -2,7 +2,6 @@
 #define FIRE_HPP
 
 #include <Bullet.hpp>
-
 #include <time.h>
 #include <iostream>
 
@@ -20,8 +19,8 @@ enum FireMode
 
 class Fire{
   public:
-    Fire(FireMode mode, float speed);
-    list<Bullet> getBullets();
+    Fire(FireMode mode, float speed, float x, float y);
+    std::list<sf::Vertex*> getBullets();
     void updateBullets(); //aggiorna la lista dei bullet rimuovendo quelli usciti dalla finestra/che hanno colpito; la gestione delle collisioni e il calo della vita è fatto nella classe game
     bool isEnemy();
     void setFiringAngle(int angle);
@@ -30,16 +29,18 @@ class Fire{
     void setPosition(float x, float y);
     void shoot();
   private:
-    list<Bullet> bullets;
-    FireMode fireMode;
+    std::list<Bullet> mBullets;
+    FireMode eFireMode;
 
     float fx;  //posizione da cui "partono" i bullet
     float fy;
 
-    bool isEnemy;   //chi possiede l'istanza
+    bool enemy;   //chi possiede l'istanza
     int fireStep;   //tempo tra un colpo e l'altro
+    int elapsedStep; //tempo dall'ultimo colpo
     int firingAngle;  //angolo a cui vengono inizializzati i bullet sparati
     float speed;  //velocita' a cui si muovono i proiettili
+    sf::Vector2f mMovement; //vettore spostamento del bullet
 };
 
 #endif //FIRE_HPP

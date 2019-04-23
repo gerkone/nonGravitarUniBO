@@ -88,6 +88,7 @@ void Game::update(sf::Time elapsedTime)
         mState = gameState::inWorld;
         mCurrentPlanet = x.get();
         mCurrentPlanet->terrainGenerator();
+        mCurrentPlanet->itemsGenerator();
         mPlayer.setPosition(mWindow.getSize().x/2, 100);
         mPlayer.setRotation(180.f);
       }
@@ -113,6 +114,18 @@ void Game::render()
   }
   else{
     mWindow.draw(mCurrentPlanet->getTerrain());
+    std::list<sf::CircleShape> bunkers = mCurrentPlanet->getBunkers();
+    std::list<sf::CircleShape>::iterator bit;
+    for(bit = bunkers.begin(); bit != bunkers.end(); bit++) {
+      std::cout << "ungu";
+      mWindow.draw(*bit);
+    }
+    std::list<sf::RectangleShape> fuels = mCurrentPlanet->getFuels();
+    std::list<sf::RectangleShape>::iterator fit;
+    for(fit = fuels.begin(); fit != fuels.end(); fit++) {
+      mWindow.draw(*fit);
+    }
+
     //mCurrentPlanet->debugging();
   }
   mWindow.display();
@@ -125,8 +138,12 @@ void Game::updateStatistics(sf::Time elapsedTime)
 
   if(mStatisticsUpdateTime >= sf::seconds(1.0f))
   {
+    std::string str = "";
+    if(mCurrentPlanet != nullptr) {     //avoids that we access to a null object while in the universe
+      str =  + "view: " + std::to_string(mCurrentPlanet->getView()) + "\n";
+    }
     mStatisticsText.setString(
-      "Frames / Second = " + std::to_string(mStatisticsNumFrames) + "\n" );
+      "Frames / Second = " + std::to_string(mStatisticsNumFrames) + "\n" + str);
 
     mStatisticsUpdateTime -= sf::seconds(1.f);
     mStatisticsNumFrames = 0;

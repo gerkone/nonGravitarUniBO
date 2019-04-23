@@ -3,7 +3,7 @@
 Bunker::Bunker(float x, float y, int v) {
   mBunker.setRadius(BUNKER_RADIUS);
   mBunker.setPosition(x, y);
-  isActive = true;
+  active = true;
   onView = v;
 
   srand(time(0));
@@ -20,29 +20,26 @@ sf::CircleShape Bunker::getCircle() {
   return mBunker;
 }
 
-int Bunker::getFireMode() {
-  return fireMode;
-}
+// int Bunker::getFireMode() {
+//   return fireMode;
+// }
 
 bool Bunker::isActive() {
   return active;
 }
 
 int Bunker::hit(int hp) {
-  hitpoi = hitpoints - hp;
+  hitpoints = hitpoints - hp;
   if(hitpoints > 0) {
     return 0;
   } else {
-    isActive = false;
+    active = false;
     return POINTS;
   }
 }
 
-int getHitpoints() {
+int Bunker::getHitpoints() {
   return hitpoints;
-}
-void Bunker::setY(float offY) {
-  mBunker.move(o, offY - BUNKER_RADIUS);  //- Bunker_HEIGHT per mantenerlo al di sopra del terreno
 }
 
 int Bunker::getView() {

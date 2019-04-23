@@ -1,6 +1,7 @@
 #ifndef FUEL_HPP
 #define FUEL_HPP
 
+#include <SFML/Graphics.hpp>
 #include <time.h>
 #include <iostream>
 const int FUEL_SMALL = 1000;
@@ -14,7 +15,6 @@ class Fuel{
     sf::RectangleShape getRectangle();
     int getFuel();  //restituisce il valore del carburante e setta isActive a false
     bool isActive();
-    void setY(float y); //necessaria per generazione graduale del terreno, va passato l'offset di cui abbassare la RectangleShape
     int getView();  //disegnare i fuel nelle y giuste e nelle view giuste e' delegato alla classe game, istanziarli alla classe world
     float getY();
     float getX();

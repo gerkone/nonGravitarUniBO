@@ -8,6 +8,10 @@ const int World::MIN_VIEWS = 3;
 const float World::VARIANCE = 0.65;
 const float World::DISPLACEMENT = 200;
 
+const float World::TERRAIN_TRANSLATION = 200.0;
+
+const int World::MAX_BUNKERS_PER_VIEW = 5;
+const int World::MAX_FUELS_PER_VIEW = 3;
 
 
 World::World(float x, float y, const sf::RenderWindow& Window)
@@ -32,13 +36,16 @@ World::World(float x, float y, const sf::RenderWindow& Window)
     }
 
     mIterator = mSeeds.begin();
-
+    mView = 0;
   }
 
 sf::CircleShape World::getCircle(){
   return mPlanet;
 }
 
+int World::getView() {
+  return mView;
+}
 //recursive midpoint displacement terrain generation
 void World::voxel_gen(int start, int end, float displacement){
   if(start + 1 >= end ){
@@ -72,8 +79,8 @@ void World::test(){
 
 void World::terrainGenerator(){
   srand(*mIterator);
-  vx[0].y = mWindow.getSize().y /2 - 200;//should be a costant
-  vx[SEGMENT_LIMIT-1].y = mWindow.getSize().y / 2 - 200;
+  vx[0].y = mWindow.getSize().y /2 - TERRAIN_TRANSLATION;//should be a costant
+  vx[SEGMENT_LIMIT-1].y = mWindow.getSize().y / 2 - TERRAIN_TRANSLATION;
   double displacement = DISPLACEMENT * VARIANCE;
   voxel_gen(0, SEGMENT_LIMIT-1, displacement);
   for (size_t i = 0; i < SEGMENT_LIMIT; i++) {
@@ -83,6 +90,28 @@ void World::terrainGenerator(){
 
 sf::VertexArray World::getTerrain(){
   return mTerrain;
+}
+
+std::list<sf::CircleShape> World::getBunkers() {
+  std::list<sf::CircleShape> items;
+  std::list<Bunker>::iterator bit;
+  for(bit = mBunkers.begin(); bit != mBunkers.end(); bit++) {
+    if((bit->getView() == mView) && (bit->isActive())) {
+      items.push_back(bit->getCircle());
+    }
+  }
+  return items;
+}
+
+std::list<sf::RectangleShape> World::getFuels() {
+  std::list<sf::RectangleShape> items;
+  std::list<Fuel>::iterator fit;
+  for(fit = mFuels.begin(); fit != mFuels.end(); fit++) {
+    if((fit->getView() == mView) && (fit->isActive())) {
+      items.push_back(fit->getRectangle());
+    }
+  }
+  return items;
 }
 
 void World::debugging() {
@@ -97,10 +126,53 @@ void World::debugging() {
 
 void World::nextView(){
   mIterator++;
-  terrainGenerator();
+  mView = (mView + 1)%mSeeds.size();
+  terrainGenerator(); //the order is important!
+  itemsGenerator();
 }
 
 void World::preView(){
   mIterator--;
-  terrainGenerator();
+  mView = (mView - 1)%mSeeds.size();
+  terrainGenerator(); //the order is important!
+  itemsGenerator();
+}
+
+bool World::visited(int v) {
+  std::list<int>::iterator it;
+  for(it = visitList.begin(); it!= visitList.end();it++) {
+    if(*it == v) {
+      return true;
+    }
+  }
+  return false;
+}
+
+void World::bunkerGenerator() {
+  int bunkers = rand()&MAX_BUNKERS_PER_VIEW;
+  int pos;
+  for(int i = 0; i < bunkers; i++) {
+    pos = rand()%SEGMENT_LIMIT;
+    Bunker tmpB = Bunker(mTerrain[pos].position.x, mTerrain[pos].position.y, mView);
+    mBunkers.push_back(tmpB);
+  }
+}
+
+void World::fuelGenerator() {
+  int fuels = rand()&MAX_FUELS_PER_VIEW;
+  int pos;
+  for(int i = 0; i < fuels; i++) {
+    pos = rand()%SEGMENT_LIMIT;
+    Fuel tmpF = Fuel(mTerrain[pos].position.x, mTerrain[pos].position.y, mView);
+    mFuels.push_back(tmpF);
+  }
+}
+
+void World::itemsGenerator() {
+  if(!visited(mView)) {
+    srand(*mIterator);
+    bunkerGenerator();
+    fuelGenerator();
+    visitList.push_back(mView); //after generating the items adds the view to the already visited
+  }
 }

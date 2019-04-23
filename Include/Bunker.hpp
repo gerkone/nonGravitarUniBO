@@ -1,22 +1,22 @@
 #ifndef BUNKER_HPP
 #define BUNKER_HPP
 
+#include <SFML/Graphics.hpp>
 #include <time.h>
 #include <iostream>
 
-const int BUNKER_RADIUS = 40;
+const int BUNKER_RADIUS = 10;
 const int POINTS = 100; //punti ricevuti alla distruzione del bunker
 
 class Bunker{
   public:
     Bunker(float x, float y, int v); //la y va settata rispetto al terreno
     sf::CircleShape getCircle();
-    int getFireMode();
+    //int getFireMode();
     bool isActive();
-    void setY(float y); //necessaria per generazione graduale del terreno, va passato l'offset
     int getView();
     int getHitpoints();
-    int hit();
+    int hit(int hp);
   private:
     sf::CircleShape mBunker;
     // FireMode fireMode;

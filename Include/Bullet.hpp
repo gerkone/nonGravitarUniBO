@@ -1,8 +1,7 @@
 #ifndef BULLET_HPP
 #define BULLET_HPP
 
-#include <Bullet.hpp>
-
+#include <SFML/Graphics.hpp>
 #include <time.h>
 #include <iostream>
 #include <list>
@@ -15,13 +14,13 @@ class Bullet{
     Bullet(float x, float y, int angle, bool type, float dmg_multi); //x,y rispetto a chi spara; type per chi ha sparato (player o bunker); dmg_multi per settare il moltiplicatore del danno
     sf::Vertex* getLine();
     bool isEnemy();
-    void hit();
+    void doHit(); //il proiettile colpisce, scompare
     int getDamage();
     bool hasHit();
   private:
     sf::Vertex mBullet[2];  //linea
     int damage; //danni fatti se si viene colpiti(si colpisce)
-    bool isEnemy; //bullet alleati non possono danneggiare il player
-    bool hasHit; //true se il proiettile ha colpito/è uscito dallo schermo
+    bool enemy; //bullet alleati non possono danneggiare il player
+    bool hit; //true se il proiettile ha colpito/è uscito dallo schermo
 };
 #endif //BULLET_HPP
