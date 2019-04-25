@@ -117,7 +117,6 @@ void Game::render()
     std::list<sf::CircleShape> bunkers = mCurrentPlanet->getBunkers();
     std::list<sf::CircleShape>::iterator bit;
     for(bit = bunkers.begin(); bit != bunkers.end(); bit++) {
-      std::cout << "ungu";
       mWindow.draw(*bit);
     }
     std::list<sf::RectangleShape> fuels = mCurrentPlanet->getFuels();

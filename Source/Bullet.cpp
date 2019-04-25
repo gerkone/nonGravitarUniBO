@@ -1,14 +1,22 @@
 #include <Bullet.hpp>
 
 Bullet::Bullet(float x, float y, int angle, bool type, float dmg_multi) {
-  mBullet[0] = sf::Vertex(sf::Vector2f(x, y));
-  mBullet[1] = sf::Vertex(sf::Vector2f(x + LENGHT, y));
+  mTexture.loadFromFile("Media/Textures/laser.png");  //gestire gli errori
+  mBullet.setTexture(mTexture);
+  mBullet.setPosition(x, y);
+  mBullet.setRotation(angle);
 
+  mVector = sf::Vector2f(SPEED * sin(angle), SPEED * cos(angle));
   damage = MIN_DAMAGE * dmg_multi;
   enemy = type;
 }
 
-sf::Vertex* Bullet::getLine() {
+void Bullet::move(sf::Time elapsedTime){
+  mBullet.move(mVector * elapsedTime.asSeconds());
+}
+
+
+sf::Sprite Bullet::getBullet() {
   return mBullet;
 }
 

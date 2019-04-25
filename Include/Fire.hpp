@@ -6,7 +6,7 @@
 #include <iostream>
 
 const int BULLET_SPEED = 10;
-const int MIN_FIRESTEP = 500; //tempo minimo tra un colpo e l'altro (in millisec)
+const int MIN_FIRESTEP = 1500; //tempo minimo tra un colpo e l'altro (in millisec)
 const int TRIPLE_ANGLE_STEP = 30; //angolo tra i tre bullet del bunker triplo
 
 enum FireMode
@@ -20,14 +20,17 @@ enum FireMode
 class Fire{
   public:
     Fire(FireMode mode, float speed, float x, float y);
-    std::list<sf::Vertex*> getBullets();
-    void updateBullets(); //aggiorna la lista dei bullet rimuovendo quelli usciti dalla finestra/che hanno colpito; la gestione delle collisioni e il calo della vita è fatto nella classe game
+    std::list<sf::Sprite> getBullets();
     bool isEnemy();
     void setFiringAngle(int angle);
     int getFireStep();
     int getFiringAngle();
     void setPosition(float x, float y);
-    void shoot();
+    void shoot(sf::Time elapsedTime);
+
+  private:
+    void updateBullets(); //aggiorna la lista dei bullet rimuovendo quelli usciti dalla finestra/che hanno colpito; la gestione delle collisioni e il calo della vita è fatto nella classe game
+    void move(sf::Time elapsedTime);
   private:
     std::list<Bullet> mBullets;
     FireMode eFireMode;

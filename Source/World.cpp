@@ -133,7 +133,11 @@ void World::nextView(){
 
 void World::preView(){
   mIterator--;
-  mView = (mView - 1)%mSeeds.size();
+  if(mView - 1 < 0) { //bad way to solve an annoying problem
+    mView = mSeeds.size() - 1;
+  } else {
+    mView--;
+  }
   terrainGenerator(); //the order is important!
   itemsGenerator();
 }
