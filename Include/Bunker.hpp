@@ -10,18 +10,18 @@ const int POINTS = 100; //punti ricevuti alla distruzione del bunker
 
 class Bunker{
   public:
-    Bunker(float x, float y, int v); //la y va settata rispetto al terreno
+    Bunker(float x, float y); //la y va settata rispetto al terreno
     sf::CircleShape getCircle();
     //int getFireMode();
     bool isActive();
-    int getView();
     int getHitpoints();
     int hit(int hp);
+    float getY();
+    float getX();
   private:
     sf::CircleShape mBunker;
 
     bool active;
     int hitpoints; //quanti colpi riesce a sopportare il bunker
-    int onView; //tiene la parte del pianeta su cui apparirà il bunker
 };
 #endif //BUNKER_HPP

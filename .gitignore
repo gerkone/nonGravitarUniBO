@@ -1,0 +1,13 @@
+# Ignore everything:
+*
+
+#Includes only /Source  /Include  /Media  directories and CMakeList file
+
+!CMakeList.txt
+!.gitignore
+!Include
+!Source
+!Media
+!Include/*
+!Source/*
+!Media/*

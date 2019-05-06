@@ -1,10 +1,9 @@
 #include <Bunker.hpp>
 
-Bunker::Bunker(float x, float y, int v) {
+Bunker::Bunker(float x, float y) {
   mBunker.setRadius(BUNKER_RADIUS);
   mBunker.setPosition(x, y);
   active = true;
-  onView = v;
 
   srand(time(0));
   if(rand()%2 > 1) {
@@ -42,6 +41,10 @@ int Bunker::getHitpoints() {
   return hitpoints;
 }
 
-int Bunker::getView() {
-  return onView;
+float Bunker::getY() {
+  return mBunker.getPosition().y;
+}
+
+float Bunker::getX() {
+  return mBunker.getPosition().x;
 }

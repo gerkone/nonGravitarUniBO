@@ -1,10 +1,9 @@
 #include <Fuel.hpp>
 
-Fuel::Fuel(float x, float y, int v) {
+Fuel::Fuel(float x, float y) {
   mFuel.setSize(sf::Vector2f(FUEL_HEIGHT, FUEL_WIDTH));
   mFuel.setPosition(x, y);
   active = true;
-  onView = v;
 
   srand(time(0));
   if(rand()%2 > 1) {  //estratta dimensione/colore del carburante
@@ -35,8 +34,4 @@ int Fuel::getFuel() {
 
 bool Fuel::isActive() {
   return active;
-}
-
-int Fuel::getView() {
-  return onView;
 }

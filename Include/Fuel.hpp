@@ -11,17 +11,15 @@ const int FUEL_HEIGHT = 30;
 
 class Fuel{
   public:
-    Fuel(float x = 0, float y = 0, int v = 1); //la y va settata rispetto al terreno
+    Fuel(float x = 0, float y = 0); //la y va settata rispetto al terreno
     sf::RectangleShape getRectangle();
     int getFuel();  //restituisce il valore del carburante e setta isActive a false
     bool isActive();
-    int getView();  //disegnare i fuel nelle y giuste e nelle view giuste e' delegato alla classe game, istanziarli alla classe world
     float getY();
     float getX();
   private:
     sf::RectangleShape mFuel;
     int capacity;
     bool active;
-    int onView; //tiene la parte del pianeta su cui apparirà il fuel
 };
 #endif //FUEL_HPP
