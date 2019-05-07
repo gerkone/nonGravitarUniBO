@@ -10,9 +10,9 @@ const float World::DISPLACEMENT = 200;
 
 const float World::TERRAIN_TRANSLATION = 200.0;
 
-const int World::MAX_BUNKERS_PER_VIEW = 5;
+const int World::MAX_BUNKERS_PER_VIEW = 8;
 const int World::MAX_FUELS_PER_VIEW = 3;
-const int World::MIN_ACCEPTABLE_RANGE = 30;
+const int World::MIN_ACCEPTABLE_RANGE = 50;
 
 World::World(float x, float y, const sf::RenderWindow& Window)
  : mWindow(Window)
@@ -69,6 +69,18 @@ void World::test(){
   }
 }
 
+int World::nBunkers() {
+  if(mItemsIterator != mItems.end())
+    return mItemsIterator->bunkers.size();
+  return 0;
+}
+
+int World::nFuels() {
+  if(mItemsIterator != mItems.end())
+    return mItemsIterator->fuels.size();
+  return 0;
+}
+
 // int World::getSegmentLimit(){
 //   return SEGMENT_LIMIT;
 // }
@@ -94,11 +106,13 @@ sf::VertexArray World::getTerrain(){
 
 std::list<sf::CircleShape> World::getBunkers() {
   std::list<sf::CircleShape> items;
-  if(mItemsIterator->visited) {
-    std::list<Bunker>::iterator bit;
-    for(bit = mItemsIterator->bunkers.begin(); bit != mItemsIterator->bunkers.end(); bit++) {
-      if(bit->isActive()) {
-        items.push_back(bit->getCircle());
+  if(mItemsIterator != mItems.end()) {
+    if(mItemsIterator->visited) {
+      std::list<Bunker>::iterator bit;
+      for(bit = mItemsIterator->bunkers.begin(); bit != mItemsIterator->bunkers.end(); bit++) {
+        if(bit->isActive()) {
+          items.push_back(bit->getCircle());
+        }
       }
     }
   }
@@ -107,11 +121,13 @@ std::list<sf::CircleShape> World::getBunkers() {
 
 std::list<sf::RectangleShape> World::getFuels() {
   std::list<sf::RectangleShape> items;
-  if(mItemsIterator->visited) {
-    std::list<Fuel>::iterator fit;
-    for(fit = mItemsIterator->fuels.begin(); fit != mItemsIterator->fuels.end(); fit++) {
-      if(fit->isActive()) {
-        items.push_back(fit->getRectangle());
+  if(mItemsIterator != mItems.end()) {
+    if(mItemsIterator->visited) {
+      std::list<Fuel>::iterator fit;
+      for(fit = mItemsIterator->fuels.begin(); fit != mItemsIterator->fuels.end(); fit++) {
+        if(fit->isActive()) {
+          items.push_back(fit->getRectangle());
+        }
       }
     }
   }
@@ -182,7 +198,7 @@ bool World::checkPosition(int pos) {
 }
 
 void World::bunkerGenerator() {
-  int bunkers = rand()&MAX_BUNKERS_PER_VIEW;
+  int bunkers = rand()&MAX_BUNKERS_PER_VIEW + 1;
   int pos;
   for(int i = 0; i < bunkers; i++) {
     pos = rand()%SEGMENT_LIMIT;
@@ -195,7 +211,7 @@ void World::bunkerGenerator() {
 }
 
 void World::fuelGenerator() {
-  int fuels = rand()&MAX_FUELS_PER_VIEW;
+  int fuels = rand()&MAX_FUELS_PER_VIEW + 1;
   int pos;
   for(int i = 0; i < fuels; i++) {
     pos = rand()%SEGMENT_LIMIT;
@@ -208,10 +224,12 @@ void World::fuelGenerator() {
 }
 
 void World::itemsGenerator() {
-  if(!mItemsIterator->visited) {
-    srand(*mIterator);
-    fuelGenerator();
-    bunkerGenerator();
-    mItemsIterator->visited = true;   //set to already visited
+  if(mItemsIterator != mItems.end()) {
+    if(!mItemsIterator->visited) {
+      srand(*mIterator);
+      fuelGenerator();
+      bunkerGenerator();
+      mItemsIterator->visited = true;   //set to already visited
+      }
     }
   }

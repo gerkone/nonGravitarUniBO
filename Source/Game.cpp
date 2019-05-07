@@ -98,11 +98,12 @@ void Game::update(sf::Time elapsedTime)
     changeWorldView();
     mPlayer.move(elapsedTime);
     mPlayer.updateBeam();
-    std::list<sf::RectangleShape> tmpFuels = mCurrentPlanet->getFuels();
-    for(std::list<sf::RectangleShape>::iterator f = tmpFuels.begin(); f != tmpFuels.end(); f++) {
-      if(tractorFuel(f->getGlobalBounds())) {
-        std::cout << "yes";
-        mCurrentPlanet->getFuelAt(f->getPosition().x);  //returns the value of the fuel and deactivates it //TODO: ritornerebbe quantita' fuel, da sommare al totale
+    if(mCurrentPlanet != nullptr) {
+      std::list<sf::RectangleShape> tmpFuels = mCurrentPlanet->getFuels();
+      for(std::list<sf::RectangleShape>::iterator f = tmpFuels.begin(); f != tmpFuels.end(); f++) {
+        if(tractorFuel(f->getGlobalBounds())) {
+          mCurrentPlanet->getFuelAt(f->getPosition().x);  //returns the value of the fuel and deactivates it //TODO: ritornerebbe quantita' fuel, da sommare al totale
+        }
       }
     }
   }
@@ -147,7 +148,9 @@ void Game::updateStatistics(sf::Time elapsedTime)
   {
     std::string str = "";
     if(mCurrentPlanet != nullptr) {     //avoids that we access to a null object while in the universe
-      str =  + "view: " + std::to_string(mCurrentPlanet->getView()) + "\n";
+      str = "view: " + std::to_string(mCurrentPlanet->getView()) + "\n";
+      str += "bunkers(real/drawn): " + std::to_string(mCurrentPlanet->nBunkers()) + "/" + std::to_string(mCurrentPlanet->getBunkers().size()) + "\n";
+      str += "fuels(real/drawn): " + std::to_string(mCurrentPlanet->nFuels()) + "/"  + std::to_string(mCurrentPlanet->getFuels().size()) + "\n";
     }
     mStatisticsText.setString(
       "Frames / Second = " + std::to_string(mStatisticsNumFrames) + "\n" + str);
