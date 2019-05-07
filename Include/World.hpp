@@ -37,6 +37,7 @@ class World{
     void nextView();
     void preView();
     int getView();
+    int getFuelAt(float pos); //returns the value of the flue in the current view at the <pos> x position
 
   private:
     void voxel_gen(int start, int end, float displacement);//called in terrainGenerator(), initialize all the point

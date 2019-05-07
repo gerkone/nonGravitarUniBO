@@ -28,6 +28,7 @@ class Game : private sf::NonCopyable
     void randomPlanetSpawn();//spawn all the planet
     bool checkPlanetsCollision(sf::CircleShape shape);//check collision between the planets on spawn
     bool collisionAircraft(sf::FloatRect rect);//collision rect with the aircraft
+    bool tractorFuel(sf::FloatRect rect); //contact with the tractor beam
     void adaptPlayerPosition();//bound the aircraft in the window view
     void changeWorldView();//change the ingame view of the world, advance/decrease the iterator to the seed used to generate the terrain
 

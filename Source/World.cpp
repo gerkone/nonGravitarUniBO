@@ -97,7 +97,9 @@ std::list<sf::CircleShape> World::getBunkers() {
   if(mItemsIterator->visited) {
     std::list<Bunker>::iterator bit;
     for(bit = mItemsIterator->bunkers.begin(); bit != mItemsIterator->bunkers.end(); bit++) {
-      items.push_back(bit->getCircle());
+      if(bit->isActive()) {
+        items.push_back(bit->getCircle());
+      }
     }
   }
   return items;
@@ -108,7 +110,9 @@ std::list<sf::RectangleShape> World::getFuels() {
   if(mItemsIterator->visited) {
     std::list<Fuel>::iterator fit;
     for(fit = mItemsIterator->fuels.begin(); fit != mItemsIterator->fuels.end(); fit++) {
-      items.push_back(fit->getRectangle());
+      if(fit->isActive()) {
+        items.push_back(fit->getRectangle());
+      }
     }
   }
   return items;
@@ -148,8 +152,18 @@ void World::preView(){
   itemsGenerator();
 }
 
+int World::getFuelAt(float pos) {
+  std::list<Fuel>::iterator fit = mItemsIterator->fuels.begin();
+  for(fit; fit != mItemsIterator->fuels.end(); fit++) {
+    if(fit->getX() == pos) {
+      return fit->getFuel();
+    }
+  }
+  return 0; //"should" be dead code
+}
+
 bool World::checkPosition(int pos) {
-  std::list<Bunker>::iterator bit =   mItemsIterator->bunkers.begin();
+  std::list<Bunker>::iterator bit = mItemsIterator->bunkers.begin();
   while(bit != mItemsIterator->bunkers.end()) {
     if((bit->getX() - MIN_ACCEPTABLE_RANGE < pos) && (bit->getX() + MIN_ACCEPTABLE_RANGE > pos)) {  //means that the new item is too close to another, as it is inside the minimum range
       return false;
@@ -157,7 +171,7 @@ bool World::checkPosition(int pos) {
     bit++;
   }
 
-  std::list<Fuel>::iterator fit =   mItemsIterator->fuels.begin();
+  std::list<Fuel>::iterator fit = mItemsIterator->fuels.begin();
   while(fit != mItemsIterator->fuels.end()) {
     if((fit->getX() - MIN_ACCEPTABLE_RANGE < pos) && (fit->getX() + MIN_ACCEPTABLE_RANGE > pos)) {  //means that the new item is too close to another, as it is inside the minimum range
       return false;

@@ -97,6 +97,14 @@ void Game::update(sf::Time elapsedTime)
   if(mState == gameState::inWorld){
     changeWorldView();
     mPlayer.move(elapsedTime);
+    mPlayer.updateBeam();
+    std::list<sf::RectangleShape> tmpFuels = mCurrentPlanet->getFuels();
+    for(std::list<sf::RectangleShape>::iterator f = tmpFuels.begin(); f != tmpFuels.end(); f++) {
+      if(tractorFuel(f->getGlobalBounds())) {
+        std::cout << "yes";
+        mCurrentPlanet->getFuelAt(f->getPosition().x);  //returns the value of the fuel and deactivates it //TODO: ritornerebbe quantita' fuel, da sommare al totale
+      }
+    }
   }
 
 }
@@ -194,6 +202,14 @@ bool Game::checkPlanetsCollision(sf::CircleShape shape){
 bool Game::collisionAircraft(sf::FloatRect rect){
   sf::FloatRect aircraftRect = mPlayer.getGlobalBounds();
   if(aircraftRect.intersects(rect))
+    return true;
+  else
+    return false;
+}
+
+bool Game::tractorFuel(sf::FloatRect rect) {
+  sf::FloatRect beamBounds = mPlayer.getBeamBounds();
+  if(beamBounds.intersects(rect))
     return true;
   else
     return false;

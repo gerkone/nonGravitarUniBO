@@ -1,6 +1,8 @@
 #include <Player.hpp>
 
 const float Player::PlayerSpeed = 200.f;
+const float Player::BEAM_WIDTH = 10.f;
+const float Player::BEAM_HEIGHT = 50.f;
 
 Player::Player(std::string texturePath, sf::RenderWindow& window)
 : mWindow(window)
@@ -9,6 +11,7 @@ Player::Player(std::string texturePath, sf::RenderWindow& window)
 , mIsMovingDown(false)
 , mIsMovingLeft(false)
 , mIsMovingRight(false)
+, mTractor(false)
 , mMovement(0.f, 0.f)
 {
     if(!mTexture.loadFromFile(texturePath)){
@@ -16,6 +19,7 @@ Player::Player(std::string texturePath, sf::RenderWindow& window)
     }
     mPlayer.setTexture(mTexture);
     mPlayer.setPosition(100.f, 100.f);
+
 }
 
 void Player::handlePlayerInput(sf::Keyboard::Key key, bool isPressed){
@@ -27,6 +31,8 @@ void Player::handlePlayerInput(sf::Keyboard::Key key, bool isPressed){
     mIsMovingLeft = isPressed;
   else if(key == sf::Keyboard::D)
     mIsMovingRight = isPressed;
+  else if(key == sf::Keyboard::Space)
+    mTractor = isPressed;
 }
 
 bool Player::getIsMovingUp(){
@@ -44,8 +50,16 @@ bool Player::getIsMovingLeft(){
 bool Player::getIsMovingRight(){
   return mIsMovingRight;
 }
+bool Player::getTractor() {
+  return mTractor;
+}
+
+sf::RectangleShape Player::getBeam() {
+  return mBeam;
+}
 
 void Player::draw(){
+  mWindow.draw(mBeam);
   mWindow.draw(mPlayer);
 }
 
@@ -83,6 +97,22 @@ void Player::update(sf::Time elapsedTime){
 
 }
 
+void Player::updateBeam() {
+  float centerX = 29; //trovato a tentativi in attessa di un modo migliore
+  float centerY = 13;
+  if(mTractor) {
+    mBeam.setSize(sf::Vector2f(BEAM_WIDTH, BEAM_HEIGHT));
+    mBeam.setPosition(mPlayer.getPosition().x - centerX, mPlayer.getPosition().y - centerY);
+  } else {
+    mBeam.setSize(sf::Vector2f(BEAM_WIDTH, 0));
+    mBeam.setPosition(mPlayer.getPosition().x - centerX, mPlayer.getPosition().y - centerY);
+  }
+}
+
 sf::FloatRect Player::getLocalBounds(){
   return mPlayer.getLocalBounds();
+}
+
+sf::FloatRect Player::getBeamBounds(){
+  return mBeam.getGlobalBounds();
 }
