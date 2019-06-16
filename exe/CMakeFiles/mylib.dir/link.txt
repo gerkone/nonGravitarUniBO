@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmylib.a  CMakeFiles/mylib.dir/Source/Game.cpp.o CMakeFiles/mylib.dir/Source/World.cpp.o CMakeFiles/mylib.dir/Source/Player.cpp.o CMakeFiles/mylib.dir/Source/Bunker.cpp.o CMakeFiles/mylib.dir/Source/Fuel.cpp.o CMakeFiles/mylib.dir/Source/Projectile.cpp.o CMakeFiles/mylib.dir/Source/ProjectileHandler.cpp.o CMakeFiles/mylib.dir/Source/TextNode.cpp.o CMakeFiles/mylib.dir/Source/ResourceHolder.cpp.o
+/usr/bin/ranlib libmylib.a
