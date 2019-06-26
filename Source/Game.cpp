@@ -257,10 +257,14 @@ void Game::changeWorldView(){
   auto view = mWindow.getSize();
   if(position.x > view.x){//right border
     mPlayer.setPosition(0, position.y);
+    auto bulletVector = mProjectileHandler.getProjectileVector();
+    bulletVector->erase(bulletVector->begin(), bulletVector->end());
     mCurrentPlanet->nextView();
   }
   else if(position.x < 0){//left border
     mPlayer.setPosition(view.x, position.y);
+    auto bulletVector = mProjectileHandler.getProjectileVector();
+    bulletVector->erase(bulletVector->begin(), bulletVector->end());
     mCurrentPlanet->preView();
   }
   else if(position.y - height/2 < 0){
@@ -268,6 +272,8 @@ void Game::changeWorldView(){
     mPlayer.setRotation(0);
     mPlayer.setPosition(mCurrentPlanet->getCircle().getPosition().x - 100, mCurrentPlanet->getCircle().getPosition().y - 100);
     bool destroy = checkPlanetDistruction();
+    auto bulletVector = mProjectileHandler.getProjectileVector();
+    bulletVector->erase(bulletVector->begin(), bulletVector->end());
     if(destroy){
       mScore += 1000;
       auto iter = mPlanetVector.erase(mPlanetIterator);
