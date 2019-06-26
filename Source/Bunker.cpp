@@ -1,7 +1,6 @@
 #include <Bunker.hpp>
 #include <iostream>
 
-const int Bunker::BUNKER_RADIUS = 15;
 const int Bunker::POINTS = 100;
 const int Bunker::LIFEPOINTS = 3;
 const sf::Time Bunker::SHOOT_RATE = sf::seconds(2.f);
@@ -15,12 +14,9 @@ Bunker::Bunker(sf::RenderWindow& window, ProjectileHandler& handler, ResourceHol
 , mResourceHolder(&holder)
 {
 
-  // if(!mTexture.loadFromFile(texturePath)){
-  //   mWindow.close();
-  // }
   mBunker.setTexture(mResourceHolder->getBunkerTexture());
   mBunker.setPosition(x, y);
-  mBunker.setScale(0.3, 0.3);
+  mBunker.setScale(0.3, 0.3);//scale the texture
   mHitpoints = LIFEPOINTS;
 
   sf::Vector2f position = mBunker.getPosition();

@@ -6,7 +6,6 @@ Projectile::Projectile(Type type, ResourceHolder& holder, sf::RenderWindow& wind
   mTargetDirection = sf::Vector2f(0.f, 0.f);
   mProjectile.setTexture(mResourceHolder->getProjectileTexture());
   mProjectile.setScale(0.05f, 0.05f);
-  //mProjectile.setRotation(180.f);
 }
 
 void Projectile::guideTowards(sf::Vector2f position){

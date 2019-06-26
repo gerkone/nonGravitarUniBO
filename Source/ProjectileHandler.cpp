@@ -13,7 +13,7 @@ std::vector<Projectile>* ProjectileHandler::getProjectileVector(){
   return &mProjectileVector;
 }
 
-void ProjectileHandler::removeFromVector(){
+void ProjectileHandler::removeFromVector(){//delete the bullet if outside the window
   for (auto it = mProjectileVector.begin(); it!=mProjectileVector.end(); ) {
     if(it->getPosition().x < 0){
       it = mProjectileVector.erase(it);
@@ -28,7 +28,7 @@ void ProjectileHandler::removeFromVector(){
     }
     else if(it->getPosition().y < 0)
       it = mProjectileVector.erase(it);
-      
+
     else
       ++it;
   }

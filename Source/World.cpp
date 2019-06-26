@@ -27,6 +27,8 @@ World::World(float x, float y, sf::RenderWindow& Window, ProjectileHandler& hand
     mPlanet.setRadius(20);
     mPlanet.setTexture(&mResourceHolder->getRandomPlanetTexture());
     mPlanet.setPosition(x,y);
+    sf::FloatRect rect = mPlanet.getGlobalBounds();
+    mPlanet.setOrigin(rect.width/2, rect.height/2);
     //srand(time(0));
     int view = rand() % (MAX_VIEWS - MIN_VIEWS) + MIN_VIEWS;//number of seeds i.e number of terrains the world has
     mText.setString(
@@ -45,7 +47,7 @@ World::World(float x, float y, sf::RenderWindow& Window, ProjectileHandler& hand
 
     mIterator = mSeeds.begin();
     terrainGenerator();
-    //bunker generation
+    //bunker and fuel generation
     for (size_t i = 0; i < view; i++) {
       std::vector<Bunker> bunkerVector_tmp;
       std::vector<Fuel> fuelVector_tmp;
@@ -90,7 +92,6 @@ World::World(float x, float y, sf::RenderWindow& Window, ProjectileHandler& hand
     mBunkerIterator = mBunkerMatrix.begin();
     mIterator = mSeeds.begin();
     mFuelIterator = mFuelMatrix.begin();
-    std::cout << mFuelMatrix.size() << '\n';
 
 }
 
@@ -145,16 +146,6 @@ void World::terrainGenerator(){
 
 sf::ConvexShape World::getTerrain(){
   return mTerrain;
-}
-
-void World::debugging() {
-  std::cout << "current seed : " << *mIterator << '\n';
-  std::cout << "all seeds in the list : ";
-  for(auto x : mSeeds){
-    std::cout << " " << x;
-  }
-  // terrainGenerator();
-  // test();
 }
 
 void World::nextView(){

@@ -31,6 +31,7 @@ Game::Game()
 {
     srand(time(NULL));
 
+    //scale the background to the window size
     sf::Vector2u TextureSize;
     sf::Vector2u WindowSize;
     sf::Texture background = mResourceHolder.getBackgroundTexture();
@@ -41,6 +42,7 @@ Game::Game()
     mBackground.setTexture(mResourceHolder.getBackgroundTexture());
     mBackground.setScale(scaleX, scaleY);
 
+    //scale the gameOver sprite to the window size
     sf::Texture gameOver = mResourceHolder.getGameOver();
     TextureSize = gameOver.getSize();
     scaleX = (float) WindowSize.x / TextureSize.x;
@@ -64,7 +66,7 @@ void Game::run()
   {
     sf::Time elapsedTime = clock.restart();//return the elapsed time since the last start
     timeSinceLastUpdate += elapsedTime;
-    //check to ensure that events and update are called once every TimePerFrame
+    //check to ensure that the game is updated with a fixed timestep
     while(timeSinceLastUpdate > TimePerFrame)
     {
       timeSinceLastUpdate -= TimePerFrame;
@@ -104,7 +106,6 @@ void Game::update(sf::Time elapsedTime)
 
   if(mState == gameState::universe){
     updateGameInfo();
-    checkGameOver();
     mPlayer.update();
     mPlayer.move(elapsedTime);
     adaptPlayerPosition();
@@ -119,6 +120,7 @@ void Game::update(sf::Time elapsedTime)
         mPlayer.setRotation(180.f);
       }
     }
+    checkGameOver();
   }
   else if(mState == gameState::inWorld){
     updateGameInfo();
@@ -190,12 +192,13 @@ void Game::updateStatistics(sf::Time elapsedTime)
 
 void Game::randomPlanetSpawn()
 {
-  int i = (rand() % (MaxPlanet - 3)) + 3; //spawn atleast one planet
+  int i = (rand() % (MaxPlanet - 3)) + 3; //spawn atleast three planet
   int k = 0;
   sf::CircleShape circle;
   while(k < i){//while i haven't spawned all the planets
     float x = rand() % (mWindow.getSize().x);
     float y = rand() % (mWindow.getSize().y);
+    //force the planet to spawn inside the window
     x = std::max(x, BorderDistance);
     x = std::min(x, mWindow.getSize().x - BorderDistance);
     y = std::max(y, BorderDistance);
@@ -217,8 +220,9 @@ void Game::randomPlanetSpawn()
 bool Game::checkPlanetsCollision(sf::CircleShape shape){
 
   for(auto& planet : mPlanetVector){
-    sf::Vector2f planet_global_coordinates = planet->getCircle().getPosition() + planet->getCircle().getOrigin();
-    sf::Vector2f shape_global_coordinates = shape.getPosition() + shape.getOrigin();
+    //use of pythagorean theorem
+    sf::Vector2f planet_global_coordinates = planet->getCircle().getPosition();
+    sf::Vector2f shape_global_coordinates = shape.getPosition();
     float a_square = pow(planet_global_coordinates.x - shape_global_coordinates.x, 2);
     float b_square = pow(planet_global_coordinates.y - shape_global_coordinates.y, 2);
     if(sqrt(a_square + b_square) <= shape.getRadius()*2 + RadiusDistance)
@@ -400,7 +404,7 @@ bool Game::checkAllPlanetDestruction(){
   if(mPlanetVector.size() == 0)
     return true;
   else
-  return false;
+    return false;
 }
 
 void Game::checkAircraftTerrainCollision(){
@@ -409,8 +413,9 @@ void Game::checkAircraftTerrainCollision(){
     position.x = mPlayer.getPosition().x;
     position.y += mPlayer.getPosition().y;
 
-    for(int i = 1; i < World::SEGMENT_LIMIT - 2; ++i){
-      if(vx[i-1].x < position.x && position.x < vx[i].x && position.x >= 0){
+    for(int i = 1; i < World::SEGMENT_LIMIT - 2; ++i){//last 2 segment are reserved
+      if(vx[i-1].x < position.x && position.x < vx[i].x){
+        //compute the line equation
         float y1 = mWindow.getSize().y - vx[i-1].y;
         float y2 = mWindow.getSize().y - vx[i].y;
         float y = y2 - y1;
@@ -418,7 +423,7 @@ void Game::checkAircraftTerrainCollision(){
         float coefficient = y / x;
         float q = -(y2-y1)*vx[i-1].x/(vx[i].x - vx[i-1].x) + y1;
         float absolute = coefficient * position.x + q;
-        if(absolute <= position.y){
+        if(absolute <= position.y){//if the aircraft is below the line then we have a collision
           mPlayer.setPosition(mWindow.getSize().x/2, 100.f);
           mPlayer.hit();
         }

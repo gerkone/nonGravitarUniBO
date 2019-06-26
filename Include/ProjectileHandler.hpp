@@ -8,7 +8,7 @@ public:
   ProjectileHandler(sf::RenderWindow& mWindow);
   void addProjectile(Projectile& projectile);
   std::vector<Projectile>* getProjectileVector();
-  void updateVector(sf::Time elapsedTime);
+  void updateVector(sf::Time elapsedTime);//update the position of the bullet
   void draw();
 
 private:

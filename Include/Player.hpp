@@ -10,23 +10,23 @@
 
 class Player {
   public:
-    Player(sf::RenderWindow& Window, ProjectileHandler& handler, ResourceHolder& holder);//percorso texture, finestra su cui disegnare lo sprite
+    Player(sf::RenderWindow& Window, ProjectileHandler& handler, ResourceHolder& holder);
     void handlePlayerInput(sf::Keyboard::Key key, bool ispressed);
     void draw();//draw the sprite in the window,call to window.draw(sprite)
     void setPosition(float x, float y);
-    sf::Vector2f getPosition();
+    sf::Vector2f getPosition();//get the player position
     sf::FloatRect getGlobalBounds();
-    void move(sf::Time elapsedTime);//translate the aircrafr
+    void move(sf::Time elapsedTime);//translate the aircraft
     void setRotation(float rotation);
     void update();//update the vector used to translate the aircraft
     sf::FloatRect getLocalBounds();
-    void updateBeam();
+    void updateBeam();//update the fuel beam
     sf::Vector2f getCenter();//get the aircraft front position
-    sf::FloatRect getBeam();
-    void updateFuel(float fuel);
+    sf::FloatRect getBeam();//get the beam rect
+    void updateFuel(float fuel);//update the fuel consumtion
     float getFuel();
-    void shoot();
-    void hit();
+    void shoot();//spawn a bullet
+    void hit();//decrese lifepoints
     int getLife();
 
   private:

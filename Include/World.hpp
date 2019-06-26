@@ -25,13 +25,11 @@ class World{
     //spawn coordinate of the circle in the main window
     World(float x, float y, sf::RenderWindow& mWindow, ProjectileHandler& handler, ResourceHolder& holder);
     sf::CircleShape getCircle();
-    sf::ConvexShape getTerrain();//return the VertexArray holding the terrain;use in window.draw(getTerrain)
-    //used for debugging
-    void debugging();
-    void terrainGenerator();//initialize the VertexArray
+    sf::ConvexShape getTerrain();//return the ConvexShape holding the terrain;use in window.draw(getTerrain)
+    void terrainGenerator();//initialize the ConvexShape
     void nextView();
     void preView();
-    void draw();//draw the terrain and the bunker
+    void draw();//draw the terrain and the bunker/fuel
     fuel_iterator& getFuelIterator();
     bunker_iterator& getBunkerIterator();
     std::vector<std::vector<Bunker>> getBunkerMatrix();
@@ -42,8 +40,8 @@ class World{
   private:
     void voxel_gen(int start, int end, float displacement);//called in terrainGenerator(), initialize all the point
     void test(); //print the content of vx
-    bool checkBunkerCollision(std::vector<Bunker> v, sf::FloatRect rect);
-    bool checkFuelCollision(std::vector<Fuel> v, sf::FloatRect rect);
+    bool checkBunkerCollision(std::vector<Bunker> v, sf::FloatRect rect);//check collision when spawning the bunker
+    bool checkFuelCollision(std::vector<Fuel> v, sf::FloatRect rect);//check collision when spawning the fuel
 
   public:
     static const int SEGMENT_LIMIT;//number of segment in the terrain

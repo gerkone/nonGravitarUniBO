@@ -11,9 +11,7 @@ Fuel::Fuel(sf::RenderWindow& window, ResourceHolder& holder, float x, float y)
     mFuel.setTexture(mResourceHolder->getFuelTexture());
     mFuel.setPosition(x, y);
     mFuel.scale(0.1f, 0.1f);
-    std::cout << mFuel.getGlobalBounds().height;
     mCapacity = ((rand() % 2 == 0) ? FUEL_SMALL : FUEL_BIG);
-    std::cout << "capacity " << mCapacity << std::endl;
 }
 
 sf::FloatRect Fuel::getRectangle(){

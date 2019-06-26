@@ -160,7 +160,6 @@ void Player::shoot(){
       sf::Vector2f position = getCenter();
       projectile.setPosition(mPlayer.getPosition().x - projectile.getRectangle().width/2, mPlayer.getPosition().y + position.y);
       mProjectileHandler->addProjectile(projectile);
-      std::cout << "Bullet Size = " << mProjectileHandler->getProjectileVector()->size() << std::endl;
       sf::Time temp = mClock.restart(); //return the elapsed time
     }
   }

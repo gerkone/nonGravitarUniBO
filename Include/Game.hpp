@@ -27,7 +27,7 @@ class Game : private sf::NonCopyable
     void proccessEvents();//handle the game events i.e player input
     void update(sf::Time elapsedTime);//update the object in the game
     void render();//draw all the object in the window
-    void updateStatistics(sf::Time elapsedTime);//print on the window game statistics and player info
+    void updateStatistics(sf::Time elapsedTime);//print on the window game statistics
     void randomPlanetSpawn();//spawn all the planet
     bool checkPlanetsCollision(sf::CircleShape shape);//check collision between the planets on spawn
     bool collisionAircraft(sf::FloatRect rect);//collision rect with the aircraft
@@ -36,13 +36,13 @@ class Game : private sf::NonCopyable
     void checkFuelPickup();//check if the player is picking up some fuel
     void checkBulletCollision();//check if the bullets are hitting something
     void checkFuel();//check the player fuel
-    void destroyBunker();
-    void BunkerShot();
-    void checkGameOver();
-    void updateGameInfo();
+    void destroyBunker();//destroy all the bunker with 0 health
+    void BunkerShot();//make the bunkers shoot
+    void checkGameOver();//check if the game is over
+    void updateGameInfo();//update the player info
     bool checkPlanetDistruction();//return true if all the bunker inside mCurrentPlanet are destroyed when leaving the planet
     bool checkAllPlanetDestruction();//return true if all the planet are destroyed
-    void checkAircraftTerrainCollision();
+    void checkAircraftTerrainCollision();//check if the aircraft has collided with the terrain
 
   private:
 

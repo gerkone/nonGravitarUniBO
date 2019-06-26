@@ -8,9 +8,9 @@
 class Fuel{
   public:
     Fuel(sf::RenderWindow& window, ResourceHolder& holder, float x, float y);
-    sf::FloatRect getRectangle();
-    int getFuel();
-    void draw();
+    sf::FloatRect getRectangle();//get the rectangle around the sprite
+    int getFuel();//return the fuel
+    void draw();//draw the sprite in the window passed in the constructor
 
   private:
     sf::Sprite mFuel;
