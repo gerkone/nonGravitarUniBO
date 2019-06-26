@@ -256,7 +256,7 @@ void Game::changeWorldView(){
   float height = mPlayer.getLocalBounds().height;
   auto view = mWindow.getSize();
   if(position.x > view.x){//right border
-    mPlayer.setPosition(width, position.y);
+    mPlayer.setPosition(0, position.y);
     mCurrentPlanet->nextView();
   }
   else if(position.x < 0){//left border
@@ -413,14 +413,8 @@ void Game::checkAircraftTerrainCollision(){
         float q = -(y2-y1)*vx[i-1].x/(vx[i].x - vx[i-1].x) + y1;
         float absolute = coefficient * position.x + q;
         if(absolute <= position.y){
-          std::cout << "posizione punta :" << position.x << " " << position.y << std::endl;
-          std::cout << "Posizione vertici : " << vx[i-1].x << " " << vx[i-1].y << " " << vx[i].x << " " <<  vx[i].y << '\n';
-          std::cout << "coefficient :" << coefficient << '\n';
-          std::cout << "proiezione :" << absolute << '\n';
-          std::cout << "collisione" << std::endl;
           mPlayer.setPosition(mWindow.getSize().x/2, 100.f);
           mPlayer.hit();
-          std::cout << "______________________________" << '\n';
         }
         break;
       }
