@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/notchla/Documents/nonGravitarUniBO
+CMAKE_SOURCE_DIR = /home/notchla/Documents/Gravitar/nonGravitarUniBO
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/notchla/Documents/nonGravitarUniBO/exe
+CMAKE_BINARY_DIR = /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe
 
 # Include any dependencies generated for this target.
 include CMakeFiles/mylib.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/mylib.dir/flags.make
 
 CMakeFiles/mylib.dir/Source/Game.cpp.o: CMakeFiles/mylib.dir/flags.make
 CMakeFiles/mylib.dir/Source/Game.cpp.o: ../Source/Game.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/notchla/Documents/nonGravitarUniBO/exe/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/mylib.dir/Source/Game.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mylib.dir/Source/Game.cpp.o -c /home/notchla/Documents/nonGravitarUniBO/Source/Game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/mylib.dir/Source/Game.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mylib.dir/Source/Game.cpp.o -c /home/notchla/Documents/Gravitar/nonGravitarUniBO/Source/Game.cpp
 
 CMakeFiles/mylib.dir/Source/Game.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mylib.dir/Source/Game.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/notchla/Documents/nonGravitarUniBO/Source/Game.cpp > CMakeFiles/mylib.dir/Source/Game.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/notchla/Documents/Gravitar/nonGravitarUniBO/Source/Game.cpp > CMakeFiles/mylib.dir/Source/Game.cpp.i
 
 CMakeFiles/mylib.dir/Source/Game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mylib.dir/Source/Game.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/notchla/Documents/nonGravitarUniBO/Source/Game.cpp -o CMakeFiles/mylib.dir/Source/Game.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/notchla/Documents/Gravitar/nonGravitarUniBO/Source/Game.cpp -o CMakeFiles/mylib.dir/Source/Game.cpp.s
 
 CMakeFiles/mylib.dir/Source/Game.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/mylib.dir/Source/Game.cpp.o.provides.build: CMakeFiles/mylib.dir/Sour
 
 CMakeFiles/mylib.dir/Source/World.cpp.o: CMakeFiles/mylib.dir/flags.make
 CMakeFiles/mylib.dir/Source/World.cpp.o: ../Source/World.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/notchla/Documents/nonGravitarUniBO/exe/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/mylib.dir/Source/World.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mylib.dir/Source/World.cpp.o -c /home/notchla/Documents/nonGravitarUniBO/Source/World.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/mylib.dir/Source/World.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mylib.dir/Source/World.cpp.o -c /home/notchla/Documents/Gravitar/nonGravitarUniBO/Source/World.cpp
 
 CMakeFiles/mylib.dir/Source/World.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mylib.dir/Source/World.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/notchla/Documents/nonGravitarUniBO/Source/World.cpp > CMakeFiles/mylib.dir/Source/World.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/notchla/Documents/Gravitar/nonGravitarUniBO/Source/World.cpp > CMakeFiles/mylib.dir/Source/World.cpp.i
 
 CMakeFiles/mylib.dir/Source/World.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mylib.dir/Source/World.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/notchla/Documents/nonGravitarUniBO/Source/World.cpp -o CMakeFiles/mylib.dir/Source/World.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/notchla/Documents/Gravitar/nonGravitarUniBO/Source/World.cpp -o CMakeFiles/mylib.dir/Source/World.cpp.s
 
 CMakeFiles/mylib.dir/Source/World.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/mylib.dir/Source/World.cpp.o.provides.build: CMakeFiles/mylib.dir/Sou
 
 CMakeFiles/mylib.dir/Source/Player.cpp.o: CMakeFiles/mylib.dir/flags.make
 CMakeFiles/mylib.dir/Source/Player.cpp.o: ../Source/Player.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/notchla/Documents/nonGravitarUniBO/exe/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/mylib.dir/Source/Player.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mylib.dir/Source/Player.cpp.o -c /home/notchla/Documents/nonGravitarUniBO/Source/Player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/mylib.dir/Source/Player.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mylib.dir/Source/Player.cpp.o -c /home/notchla/Documents/Gravitar/nonGravitarUniBO/Source/Player.cpp
 
 CMakeFiles/mylib.dir/Source/Player.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mylib.dir/Source/Player.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/notchla/Documents/nonGravitarUniBO/Source/Player.cpp > CMakeFiles/mylib.dir/Source/Player.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/notchla/Documents/Gravitar/nonGravitarUniBO/Source/Player.cpp > CMakeFiles/mylib.dir/Source/Player.cpp.i
 
 CMakeFiles/mylib.dir/Source/Player.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mylib.dir/Source/Player.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/notchla/Documents/nonGravitarUniBO/Source/Player.cpp -o CMakeFiles/mylib.dir/Source/Player.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/notchla/Documents/Gravitar/nonGravitarUniBO/Source/Player.cpp -o CMakeFiles/mylib.dir/Source/Player.cpp.s
 
 CMakeFiles/mylib.dir/Source/Player.cpp.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/mylib.dir/Source/Player.cpp.o.provides.build: CMakeFiles/mylib.dir/So
 
 CMakeFiles/mylib.dir/Source/Bunker.cpp.o: CMakeFiles/mylib.dir/flags.make
 CMakeFiles/mylib.dir/Source/Bunker.cpp.o: ../Source/Bunker.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/notchla/Documents/nonGravitarUniBO/exe/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/mylib.dir/Source/Bunker.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mylib.dir/Source/Bunker.cpp.o -c /home/notchla/Documents/nonGravitarUniBO/Source/Bunker.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/mylib.dir/Source/Bunker.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mylib.dir/Source/Bunker.cpp.o -c /home/notchla/Documents/Gravitar/nonGravitarUniBO/Source/Bunker.cpp
 
 CMakeFiles/mylib.dir/Source/Bunker.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mylib.dir/Source/Bunker.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/notchla/Documents/nonGravitarUniBO/Source/Bunker.cpp > CMakeFiles/mylib.dir/Source/Bunker.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/notchla/Documents/Gravitar/nonGravitarUniBO/Source/Bunker.cpp > CMakeFiles/mylib.dir/Source/Bunker.cpp.i
 
 CMakeFiles/mylib.dir/Source/Bunker.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mylib.dir/Source/Bunker.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/notchla/Documents/nonGravitarUniBO/Source/Bunker.cpp -o CMakeFiles/mylib.dir/Source/Bunker.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/notchla/Documents/Gravitar/nonGravitarUniBO/Source/Bunker.cpp -o CMakeFiles/mylib.dir/Source/Bunker.cpp.s
 
 CMakeFiles/mylib.dir/Source/Bunker.cpp.o.requires:
 
@@ -155,16 +155,16 @@ CMakeFiles/mylib.dir/Source/Bunker.cpp.o.provides.build: CMakeFiles/mylib.dir/So
 
 CMakeFiles/mylib.dir/Source/Fuel.cpp.o: CMakeFiles/mylib.dir/flags.make
 CMakeFiles/mylib.dir/Source/Fuel.cpp.o: ../Source/Fuel.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/notchla/Documents/nonGravitarUniBO/exe/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/mylib.dir/Source/Fuel.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mylib.dir/Source/Fuel.cpp.o -c /home/notchla/Documents/nonGravitarUniBO/Source/Fuel.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/mylib.dir/Source/Fuel.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mylib.dir/Source/Fuel.cpp.o -c /home/notchla/Documents/Gravitar/nonGravitarUniBO/Source/Fuel.cpp
 
 CMakeFiles/mylib.dir/Source/Fuel.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mylib.dir/Source/Fuel.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/notchla/Documents/nonGravitarUniBO/Source/Fuel.cpp > CMakeFiles/mylib.dir/Source/Fuel.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/notchla/Documents/Gravitar/nonGravitarUniBO/Source/Fuel.cpp > CMakeFiles/mylib.dir/Source/Fuel.cpp.i
 
 CMakeFiles/mylib.dir/Source/Fuel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mylib.dir/Source/Fuel.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/notchla/Documents/nonGravitarUniBO/Source/Fuel.cpp -o CMakeFiles/mylib.dir/Source/Fuel.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/notchla/Documents/Gravitar/nonGravitarUniBO/Source/Fuel.cpp -o CMakeFiles/mylib.dir/Source/Fuel.cpp.s
 
 CMakeFiles/mylib.dir/Source/Fuel.cpp.o.requires:
 
@@ -179,16 +179,16 @@ CMakeFiles/mylib.dir/Source/Fuel.cpp.o.provides.build: CMakeFiles/mylib.dir/Sour
 
 CMakeFiles/mylib.dir/Source/Projectile.cpp.o: CMakeFiles/mylib.dir/flags.make
 CMakeFiles/mylib.dir/Source/Projectile.cpp.o: ../Source/Projectile.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/notchla/Documents/nonGravitarUniBO/exe/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/mylib.dir/Source/Projectile.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mylib.dir/Source/Projectile.cpp.o -c /home/notchla/Documents/nonGravitarUniBO/Source/Projectile.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/mylib.dir/Source/Projectile.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mylib.dir/Source/Projectile.cpp.o -c /home/notchla/Documents/Gravitar/nonGravitarUniBO/Source/Projectile.cpp
 
 CMakeFiles/mylib.dir/Source/Projectile.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mylib.dir/Source/Projectile.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/notchla/Documents/nonGravitarUniBO/Source/Projectile.cpp > CMakeFiles/mylib.dir/Source/Projectile.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/notchla/Documents/Gravitar/nonGravitarUniBO/Source/Projectile.cpp > CMakeFiles/mylib.dir/Source/Projectile.cpp.i
 
 CMakeFiles/mylib.dir/Source/Projectile.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mylib.dir/Source/Projectile.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/notchla/Documents/nonGravitarUniBO/Source/Projectile.cpp -o CMakeFiles/mylib.dir/Source/Projectile.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/notchla/Documents/Gravitar/nonGravitarUniBO/Source/Projectile.cpp -o CMakeFiles/mylib.dir/Source/Projectile.cpp.s
 
 CMakeFiles/mylib.dir/Source/Projectile.cpp.o.requires:
 
@@ -203,16 +203,16 @@ CMakeFiles/mylib.dir/Source/Projectile.cpp.o.provides.build: CMakeFiles/mylib.di
 
 CMakeFiles/mylib.dir/Source/ProjectileHandler.cpp.o: CMakeFiles/mylib.dir/flags.make
 CMakeFiles/mylib.dir/Source/ProjectileHandler.cpp.o: ../Source/ProjectileHandler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/notchla/Documents/nonGravitarUniBO/exe/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/mylib.dir/Source/ProjectileHandler.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mylib.dir/Source/ProjectileHandler.cpp.o -c /home/notchla/Documents/nonGravitarUniBO/Source/ProjectileHandler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/mylib.dir/Source/ProjectileHandler.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mylib.dir/Source/ProjectileHandler.cpp.o -c /home/notchla/Documents/Gravitar/nonGravitarUniBO/Source/ProjectileHandler.cpp
 
 CMakeFiles/mylib.dir/Source/ProjectileHandler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mylib.dir/Source/ProjectileHandler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/notchla/Documents/nonGravitarUniBO/Source/ProjectileHandler.cpp > CMakeFiles/mylib.dir/Source/ProjectileHandler.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/notchla/Documents/Gravitar/nonGravitarUniBO/Source/ProjectileHandler.cpp > CMakeFiles/mylib.dir/Source/ProjectileHandler.cpp.i
 
 CMakeFiles/mylib.dir/Source/ProjectileHandler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mylib.dir/Source/ProjectileHandler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/notchla/Documents/nonGravitarUniBO/Source/ProjectileHandler.cpp -o CMakeFiles/mylib.dir/Source/ProjectileHandler.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/notchla/Documents/Gravitar/nonGravitarUniBO/Source/ProjectileHandler.cpp -o CMakeFiles/mylib.dir/Source/ProjectileHandler.cpp.s
 
 CMakeFiles/mylib.dir/Source/ProjectileHandler.cpp.o.requires:
 
@@ -227,16 +227,16 @@ CMakeFiles/mylib.dir/Source/ProjectileHandler.cpp.o.provides.build: CMakeFiles/m
 
 CMakeFiles/mylib.dir/Source/TextNode.cpp.o: CMakeFiles/mylib.dir/flags.make
 CMakeFiles/mylib.dir/Source/TextNode.cpp.o: ../Source/TextNode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/notchla/Documents/nonGravitarUniBO/exe/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/mylib.dir/Source/TextNode.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mylib.dir/Source/TextNode.cpp.o -c /home/notchla/Documents/nonGravitarUniBO/Source/TextNode.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/mylib.dir/Source/TextNode.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mylib.dir/Source/TextNode.cpp.o -c /home/notchla/Documents/Gravitar/nonGravitarUniBO/Source/TextNode.cpp
 
 CMakeFiles/mylib.dir/Source/TextNode.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mylib.dir/Source/TextNode.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/notchla/Documents/nonGravitarUniBO/Source/TextNode.cpp > CMakeFiles/mylib.dir/Source/TextNode.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/notchla/Documents/Gravitar/nonGravitarUniBO/Source/TextNode.cpp > CMakeFiles/mylib.dir/Source/TextNode.cpp.i
 
 CMakeFiles/mylib.dir/Source/TextNode.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mylib.dir/Source/TextNode.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/notchla/Documents/nonGravitarUniBO/Source/TextNode.cpp -o CMakeFiles/mylib.dir/Source/TextNode.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/notchla/Documents/Gravitar/nonGravitarUniBO/Source/TextNode.cpp -o CMakeFiles/mylib.dir/Source/TextNode.cpp.s
 
 CMakeFiles/mylib.dir/Source/TextNode.cpp.o.requires:
 
@@ -251,16 +251,16 @@ CMakeFiles/mylib.dir/Source/TextNode.cpp.o.provides.build: CMakeFiles/mylib.dir/
 
 CMakeFiles/mylib.dir/Source/ResourceHolder.cpp.o: CMakeFiles/mylib.dir/flags.make
 CMakeFiles/mylib.dir/Source/ResourceHolder.cpp.o: ../Source/ResourceHolder.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/notchla/Documents/nonGravitarUniBO/exe/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/mylib.dir/Source/ResourceHolder.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mylib.dir/Source/ResourceHolder.cpp.o -c /home/notchla/Documents/nonGravitarUniBO/Source/ResourceHolder.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/mylib.dir/Source/ResourceHolder.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mylib.dir/Source/ResourceHolder.cpp.o -c /home/notchla/Documents/Gravitar/nonGravitarUniBO/Source/ResourceHolder.cpp
 
 CMakeFiles/mylib.dir/Source/ResourceHolder.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mylib.dir/Source/ResourceHolder.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/notchla/Documents/nonGravitarUniBO/Source/ResourceHolder.cpp > CMakeFiles/mylib.dir/Source/ResourceHolder.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/notchla/Documents/Gravitar/nonGravitarUniBO/Source/ResourceHolder.cpp > CMakeFiles/mylib.dir/Source/ResourceHolder.cpp.i
 
 CMakeFiles/mylib.dir/Source/ResourceHolder.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mylib.dir/Source/ResourceHolder.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/notchla/Documents/nonGravitarUniBO/Source/ResourceHolder.cpp -o CMakeFiles/mylib.dir/Source/ResourceHolder.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/notchla/Documents/Gravitar/nonGravitarUniBO/Source/ResourceHolder.cpp -o CMakeFiles/mylib.dir/Source/ResourceHolder.cpp.s
 
 CMakeFiles/mylib.dir/Source/ResourceHolder.cpp.o.requires:
 
@@ -299,7 +299,7 @@ libmylib.a: CMakeFiles/mylib.dir/Source/TextNode.cpp.o
 libmylib.a: CMakeFiles/mylib.dir/Source/ResourceHolder.cpp.o
 libmylib.a: CMakeFiles/mylib.dir/build.make
 libmylib.a: CMakeFiles/mylib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/notchla/Documents/nonGravitarUniBO/exe/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX static library libmylib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX static library libmylib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/mylib.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mylib.dir/link.txt --verbose=$(VERBOSE)
 
@@ -325,6 +325,6 @@ CMakeFiles/mylib.dir/clean:
 .PHONY : CMakeFiles/mylib.dir/clean
 
 CMakeFiles/mylib.dir/depend:
-	cd /home/notchla/Documents/nonGravitarUniBO/exe && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/notchla/Documents/nonGravitarUniBO /home/notchla/Documents/nonGravitarUniBO /home/notchla/Documents/nonGravitarUniBO/exe /home/notchla/Documents/nonGravitarUniBO/exe /home/notchla/Documents/nonGravitarUniBO/exe/CMakeFiles/mylib.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/notchla/Documents/Gravitar/nonGravitarUniBO /home/notchla/Documents/Gravitar/nonGravitarUniBO /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/mylib.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/mylib.dir/depend
 

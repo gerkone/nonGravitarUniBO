@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/notchla/Documents/nonGravitarUniBO/Include 
+CXX_INCLUDES = -I/home/notchla/Documents/Gravitar/nonGravitarUniBO/Include 
 

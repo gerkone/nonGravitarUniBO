@@ -1,1 +1,0 @@
-/usr/bin/c++    -rdynamic CMakeFiles/myexec.dir/Source/Main.cpp.o  -o myexec libmylib.a -lsfml-graphics -lsfml-window -lsfml-system 

@@ -6,11 +6,11 @@ CMakeFiles/mylib.dir/Source/Bunker.cpp.o
  ../Include/Projectile.hpp
  ../Include/ProjectileHandler.hpp
  ../Include/ResourceHolder.hpp
- /home/notchla/Documents/nonGravitarUniBO/Source/Bunker.cpp
+ /home/notchla/Documents/Gravitar/nonGravitarUniBO/Source/Bunker.cpp
 CMakeFiles/mylib.dir/Source/Fuel.cpp.o
  ../Include/Fuel.hpp
  ../Include/ResourceHolder.hpp
- /home/notchla/Documents/nonGravitarUniBO/Source/Fuel.cpp
+ /home/notchla/Documents/Gravitar/nonGravitarUniBO/Source/Fuel.cpp
 CMakeFiles/mylib.dir/Source/Game.cpp.o
  ../Include/Bunker.hpp
  ../Include/Fuel.hpp
@@ -21,29 +21,29 @@ CMakeFiles/mylib.dir/Source/Game.cpp.o
  ../Include/ResourceHolder.hpp
  ../Include/TextNode.hpp
  ../Include/World.hpp
- /home/notchla/Documents/nonGravitarUniBO/Source/Game.cpp
+ /home/notchla/Documents/Gravitar/nonGravitarUniBO/Source/Game.cpp
 CMakeFiles/mylib.dir/Source/Player.cpp.o
  ../Include/Player.hpp
  ../Include/Projectile.hpp
  ../Include/ProjectileHandler.hpp
  ../Include/ResourceHolder.hpp
  ../Include/TextNode.hpp
- /home/notchla/Documents/nonGravitarUniBO/Source/Player.cpp
+ /home/notchla/Documents/Gravitar/nonGravitarUniBO/Source/Player.cpp
 CMakeFiles/mylib.dir/Source/Projectile.cpp.o
  ../Include/Projectile.hpp
  ../Include/ResourceHolder.hpp
- /home/notchla/Documents/nonGravitarUniBO/Source/Projectile.cpp
+ /home/notchla/Documents/Gravitar/nonGravitarUniBO/Source/Projectile.cpp
 CMakeFiles/mylib.dir/Source/ProjectileHandler.cpp.o
  ../Include/Projectile.hpp
  ../Include/ProjectileHandler.hpp
  ../Include/ResourceHolder.hpp
- /home/notchla/Documents/nonGravitarUniBO/Source/ProjectileHandler.cpp
+ /home/notchla/Documents/Gravitar/nonGravitarUniBO/Source/ProjectileHandler.cpp
 CMakeFiles/mylib.dir/Source/ResourceHolder.cpp.o
  ../Include/ResourceHolder.hpp
- /home/notchla/Documents/nonGravitarUniBO/Source/ResourceHolder.cpp
+ /home/notchla/Documents/Gravitar/nonGravitarUniBO/Source/ResourceHolder.cpp
 CMakeFiles/mylib.dir/Source/TextNode.cpp.o
  ../Include/TextNode.hpp
- /home/notchla/Documents/nonGravitarUniBO/Source/TextNode.cpp
+ /home/notchla/Documents/Gravitar/nonGravitarUniBO/Source/TextNode.cpp
 CMakeFiles/mylib.dir/Source/World.cpp.o
  ../Include/Bunker.hpp
  ../Include/Fuel.hpp
@@ -51,4 +51,4 @@ CMakeFiles/mylib.dir/Source/World.cpp.o
  ../Include/ProjectileHandler.hpp
  ../Include/ResourceHolder.hpp
  ../Include/World.hpp
- /home/notchla/Documents/nonGravitarUniBO/Source/World.cpp
+ /home/notchla/Documents/Gravitar/nonGravitarUniBO/Source/World.cpp

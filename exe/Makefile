@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/notchla/Documents/nonGravitarUniBO
+CMAKE_SOURCE_DIR = /home/notchla/Documents/Gravitar/nonGravitarUniBO
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/notchla/Documents/nonGravitarUniBO/exe
+CMAKE_BINARY_DIR = /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/notchla/Documents/nonGravitarUniBO/exe/CMakeFiles /home/notchla/Documents/nonGravitarUniBO/exe/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/notchla/Documents/nonGravitarUniBO/exe/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -124,17 +124,17 @@ mylib/fast:
 .PHONY : mylib/fast
 
 #=============================================================================
-# Target rules for targets named myexec
+# Target rules for targets named Gravitar
 
 # Build rule for target.
-myexec: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 myexec
-.PHONY : myexec
+Gravitar: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Gravitar
+.PHONY : Gravitar
 
 # fast build rule for target.
-myexec/fast:
-	$(MAKE) -f CMakeFiles/myexec.dir/build.make CMakeFiles/myexec.dir/build
-.PHONY : myexec/fast
+Gravitar/fast:
+	$(MAKE) -f CMakeFiles/Gravitar.dir/build.make CMakeFiles/Gravitar.dir/build
+.PHONY : Gravitar/fast
 
 Source/Bunker.o: Source/Bunker.cpp.o
 
@@ -223,7 +223,7 @@ Source/Main.o: Source/Main.cpp.o
 
 # target to build an object file
 Source/Main.cpp.o:
-	$(MAKE) -f CMakeFiles/myexec.dir/build.make CMakeFiles/myexec.dir/Source/Main.cpp.o
+	$(MAKE) -f CMakeFiles/Gravitar.dir/build.make CMakeFiles/Gravitar.dir/Source/Main.cpp.o
 .PHONY : Source/Main.cpp.o
 
 Source/Main.i: Source/Main.cpp.i
@@ -232,7 +232,7 @@ Source/Main.i: Source/Main.cpp.i
 
 # target to preprocess a source file
 Source/Main.cpp.i:
-	$(MAKE) -f CMakeFiles/myexec.dir/build.make CMakeFiles/myexec.dir/Source/Main.cpp.i
+	$(MAKE) -f CMakeFiles/Gravitar.dir/build.make CMakeFiles/Gravitar.dir/Source/Main.cpp.i
 .PHONY : Source/Main.cpp.i
 
 Source/Main.s: Source/Main.cpp.s
@@ -241,7 +241,7 @@ Source/Main.s: Source/Main.cpp.s
 
 # target to generate assembly for a file
 Source/Main.cpp.s:
-	$(MAKE) -f CMakeFiles/myexec.dir/build.make CMakeFiles/myexec.dir/Source/Main.cpp.s
+	$(MAKE) -f CMakeFiles/Gravitar.dir/build.make CMakeFiles/Gravitar.dir/Source/Main.cpp.s
 .PHONY : Source/Main.cpp.s
 
 Source/Player.o: Source/Player.cpp.o
@@ -415,7 +415,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... mylib"
-	@echo "... myexec"
+	@echo "... Gravitar"
 	@echo "... Source/Bunker.o"
 	@echo "... Source/Bunker.i"
 	@echo "... Source/Bunker.s"
