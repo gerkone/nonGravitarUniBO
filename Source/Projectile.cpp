@@ -5,8 +5,8 @@ const int Projectile::BULLET_VELOCITY = 500;
 Projectile::Projectile(Type type, ResourceHolder& holder, sf::RenderWindow& window) : mType(type), mResourceHolder(&holder), mWindow(&window){
   mTargetDirection = sf::Vector2f(0.f, 0.f);
   mProjectile.setTexture(mResourceHolder->getProjectileTexture());
-  mProjectile.setScale(2.5f, 1.f);
-  mProjectile.setRotation(180.f);
+  mProjectile.setScale(0.05f, 0.05f);
+  //mProjectile.setRotation(180.f);
 }
 
 void Projectile::guideTowards(sf::Vector2f position){
