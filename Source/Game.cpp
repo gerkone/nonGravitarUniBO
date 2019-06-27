@@ -21,7 +21,7 @@ Game::Game()
 , mStatisticsNumFrames(0)
 , mStatisticsUpdateTime()
 , mPlanetVector()
-, mState(gameState::universe)
+, mState(gameState::start)
 , mCurrentPlanet(nullptr)
 , mProjectileHandler(mWindow)
 , mPlayer(mWindow, mProjectileHandler, mResourceHolder)
@@ -49,6 +49,14 @@ Game::Game()
     scaleY = (float) WindowSize.y / TextureSize.y;
     mGameOver.setTexture(mResourceHolder.getGameOver());
     mGameOver.setScale(scaleX, scaleY);
+
+    //scale the intro to the window size
+    sf::Texture intro = mResourceHolder.getIntroTexture();
+    TextureSize = intro.getSize();
+    scaleX = (float) WindowSize.x / TextureSize.x;
+    scaleY = (float) WindowSize.y / TextureSize.y;
+    mIntro.setTexture(mResourceHolder.getIntroTexture());
+    mIntro.setScale(scaleX, scaleY);
 
     mStatisticsText.setFont(mResourceHolder.getFont());
     mStatisticsText.setPosition(5.f, 5.f);
@@ -89,6 +97,8 @@ void Game::proccessEvents()
     switch(event.type)
     {
       case sf::Event::KeyPressed:
+        if(mState == gameState::start)
+          mState = gameState::universe;
         mPlayer.handlePlayerInput(event.key.code, true);
         break;
       case sf::Event::KeyReleased:
@@ -145,13 +155,25 @@ void Game::render()
 {
   mWindow.clear();
 
-  if (mState == gameState::universe){
-  //unique_ptr can't be copied only way to iterate is with reference
+  if(mState == gameState::start){
+    sf::Text info;
+    info.setFont(mResourceHolder.getFont());
+    info .setString(
+      "PRESS A BUTTON TO CONTINUE"
+    );
+    info.setCharacterSize(40);
+    sf::FloatRect rect = info.getLocalBounds();
+    info.setPosition(mWindow.getSize().x/2 - rect.width/2, mWindow.getSize().y - 100);
+    mWindow.draw(mIntro);
+    mWindow.draw(info);
+  }
+  else if (mState == gameState::universe){
     mWindow.draw(mBackground);
     mPlayer.draw();
     mWindow.draw(mStatisticsText);
     mWindow.draw(mFuelInfo);
     mWindow.draw(mScoreText);
+    //unique_ptr can't be copied only way to iterate is with reference
     for(auto& x : mPlanetVector){
       mWindow.draw(x->getCircle());
     }

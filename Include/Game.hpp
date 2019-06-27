@@ -14,6 +14,7 @@ class Game : private sf::NonCopyable
   private:
 
     enum gameState {
+      start,
       universe,
       inWorld,
       gameOver
@@ -73,6 +74,7 @@ class Game : private sf::NonCopyable
     int mScore;
     sf::Text mScoreText;
     sf::Sprite mGameOver;
+    sf::Sprite mIntro;
 
 };
 #endif //GAME_HPP

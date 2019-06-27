@@ -43,6 +43,9 @@ ResourceHolder::ResourceHolder(){
 
   if(!mPlanet6.loadFromFile("Media/Textures/planet6.png"))
     throw std::runtime_error("Planet6 Texture - failed to load");
+
+  if(!mIntro.loadFromFile("Media/Textures/intro.png"))
+    throw std::runtime_error("intro Texture - failed to load");
 }
 
 sf::Texture& ResourceHolder::getTerrainTexture(){
@@ -75,6 +78,10 @@ sf::Texture& ResourceHolder::getGameOver(){
 
 sf::Font& ResourceHolder::getFont(){
   return mFont;
+}
+
+sf::Texture& ResourceHolder::getIntroTexture(){
+  return mIntro;
 }
 
 sf::Texture& ResourceHolder::getRandomPlanetTexture(){

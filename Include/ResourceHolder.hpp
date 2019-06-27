@@ -15,6 +15,7 @@ public:
   sf::Texture& getGameOver();
   sf::Font& getFont();
   sf::Texture& getRandomPlanetTexture();
+  sf::Texture& getIntroTexture();
 
 private:
   sf::Texture mAircraftTexture;
@@ -30,6 +31,7 @@ private:
   sf::Texture mPlanet4;
   sf::Texture mPlanet5;
   sf::Texture mPlanet6;
+  sf::Texture mIntro;
   sf::Font mFont;
 };
 #endif
