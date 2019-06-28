@@ -23,9 +23,9 @@ Copiare poi la cartella Media dove si è "installato" il gioco e compilare trami
 Il gioco puo essere eseguito eseguendo ./Gravitar
 
 ## Comandi
-W A S D  --   movimento
-Spazio   --   sparare
-B        --   raggio traente
+W A S D  --   movimento\\n
+Spazio   --   sparare\\n
+B        --   raggio traente\\n
 
 ## Licenza
 Il software è distribuito sotto licenza MIT.
