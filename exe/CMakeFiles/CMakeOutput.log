@@ -28,28 +28,28 @@ The CXX compiler identification is GNU, found in "/home/notchla/Documents/Gravit
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c5b80/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c5b80.dir/build.make CMakeFiles/cmTC_c5b80.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_4df78/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4df78.dir/build.make CMakeFiles/cmTC_4df78.dir/build
 make[1]: Entering directory '/home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c5b80.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_c5b80.dir/testCCompiler.c.o   -c /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_c5b80
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c5b80.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_c5b80.dir/testCCompiler.c.o  -o cmTC_c5b80 
+Building C object CMakeFiles/cmTC_4df78.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_4df78.dir/testCCompiler.c.o   -c /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_4df78
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4df78.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_4df78.dir/testCCompiler.c.o  -o cmTC_4df78 
 make[1]: Leaving directory '/home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_a4544/fast"
-/usr/bin/make -f CMakeFiles/cmTC_a4544.dir/build.make CMakeFiles/cmTC_a4544.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_396f8/fast"
+/usr/bin/make -f CMakeFiles/cmTC_396f8.dir/build.make CMakeFiles/cmTC_396f8.dir/build
 make[1]: Entering directory '/home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_a4544.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_a4544.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_a4544
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a4544.dir/link.txt --verbose=1
-/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_a4544.dir/CMakeCCompilerABI.c.o  -o cmTC_a4544 
+Building C object CMakeFiles/cmTC_396f8.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_396f8.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_396f8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_396f8.dir/link.txt --verbose=1
+/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_396f8.dir/CMakeCCompilerABI.c.o  -o cmTC_396f8 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -61,9 +61,9 @@ Thread model: posix
 gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_a4544' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccWorOaW.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_a4544 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_a4544.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_a4544' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_396f8' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cc99z2EM.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_396f8 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_396f8.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_396f8' '-mtune=generic' '-march=x86-64'
 make[1]: Leaving directory '/home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp'
 
 
@@ -71,14 +71,14 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_a4544/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_a4544.dir/build.make CMakeFiles/cmTC_a4544.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_396f8/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_396f8.dir/build.make CMakeFiles/cmTC_396f8.dir/build]
   ignore line: [make[1]: Entering directory '/home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_a4544.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_a4544.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_a4544]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a4544.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_a4544.dir/CMakeCCompilerABI.c.o  -o cmTC_a4544 ]
+  ignore line: [Building C object CMakeFiles/cmTC_396f8.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_396f8.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_396f8]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_396f8.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_396f8.dir/CMakeCCompilerABI.c.o  -o cmTC_396f8 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -90,13 +90,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_a4544' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccWorOaW.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_a4544 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_a4544.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_396f8' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cc99z2EM.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_396f8 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_396f8.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccWorOaW.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc99z2EM.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -116,7 +116,7 @@ Parsed C implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_a4544] ==> ignore
+    arg [cmTC_396f8] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -128,7 +128,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_a4544.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_396f8.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
@@ -160,14 +160,14 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_e219b/fast"
-/usr/bin/make -f CMakeFiles/cmTC_e219b.dir/build.make CMakeFiles/cmTC_e219b.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_c5d91/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c5d91.dir/build.make CMakeFiles/cmTC_c5d91.dir/build
 make[1]: Entering directory '/home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_e219b.dir/feature_tests.c.o
-/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_e219b.dir/feature_tests.c.o   -c /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/feature_tests.c
-Linking C executable cmTC_e219b
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e219b.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_e219b.dir/feature_tests.c.o  -o cmTC_e219b 
+Building C object CMakeFiles/cmTC_c5d91.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_c5d91.dir/feature_tests.c.o   -c /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/feature_tests.c
+Linking C executable cmTC_c5d91
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c5d91.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_c5d91.dir/feature_tests.c.o  -o cmTC_c5d91 
 make[1]: Leaving directory '/home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp'
 
 
@@ -180,14 +180,14 @@ make[1]: Leaving directory '/home/notchla/Documents/Gravitar/nonGravitarUniBO/ex
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_47b61/fast"
-/usr/bin/make -f CMakeFiles/cmTC_47b61.dir/build.make CMakeFiles/cmTC_47b61.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_a08c3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a08c3.dir/build.make CMakeFiles/cmTC_a08c3.dir/build
 make[1]: Entering directory '/home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_47b61.dir/feature_tests.c.o
-/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_47b61.dir/feature_tests.c.o   -c /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/feature_tests.c
-Linking C executable cmTC_47b61
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_47b61.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_47b61.dir/feature_tests.c.o  -o cmTC_47b61 
+Building C object CMakeFiles/cmTC_a08c3.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_a08c3.dir/feature_tests.c.o   -c /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/feature_tests.c
+Linking C executable cmTC_a08c3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a08c3.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_a08c3.dir/feature_tests.c.o  -o cmTC_a08c3 
 make[1]: Leaving directory '/home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp'
 
 
@@ -200,14 +200,14 @@ make[1]: Leaving directory '/home/notchla/Documents/Gravitar/nonGravitarUniBO/ex
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_37a31/fast"
-/usr/bin/make -f CMakeFiles/cmTC_37a31.dir/build.make CMakeFiles/cmTC_37a31.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_4f3cb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4f3cb.dir/build.make CMakeFiles/cmTC_4f3cb.dir/build
 make[1]: Entering directory '/home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_37a31.dir/feature_tests.c.o
-/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_37a31.dir/feature_tests.c.o   -c /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/feature_tests.c
-Linking C executable cmTC_37a31
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_37a31.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_37a31.dir/feature_tests.c.o  -o cmTC_37a31 
+Building C object CMakeFiles/cmTC_4f3cb.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_4f3cb.dir/feature_tests.c.o   -c /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/feature_tests.c
+Linking C executable cmTC_4f3cb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4f3cb.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_4f3cb.dir/feature_tests.c.o  -o cmTC_4f3cb 
 make[1]: Leaving directory '/home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp'
 
 
@@ -218,28 +218,28 @@ make[1]: Leaving directory '/home/notchla/Documents/Gravitar/nonGravitarUniBO/ex
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_cb9fc/fast"
-/usr/bin/make -f CMakeFiles/cmTC_cb9fc.dir/build.make CMakeFiles/cmTC_cb9fc.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_6958c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6958c.dir/build.make CMakeFiles/cmTC_6958c.dir/build
 make[1]: Entering directory '/home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_cb9fc.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTC_cb9fc.dir/testCXXCompiler.cxx.o -c /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_cb9fc
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cb9fc.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_cb9fc.dir/testCXXCompiler.cxx.o  -o cmTC_cb9fc 
+Building CXX object CMakeFiles/cmTC_6958c.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_6958c.dir/testCXXCompiler.cxx.o -c /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_6958c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6958c.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_6958c.dir/testCXXCompiler.cxx.o  -o cmTC_6958c 
 make[1]: Leaving directory '/home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_d7889/fast"
-/usr/bin/make -f CMakeFiles/cmTC_d7889.dir/build.make CMakeFiles/cmTC_d7889.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_a2d1e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a2d1e.dir/build.make CMakeFiles/cmTC_a2d1e.dir/build
 make[1]: Entering directory '/home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_d7889.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++     -o CMakeFiles/cmTC_d7889.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_d7889
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d7889.dir/link.txt --verbose=1
-/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_d7889.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_d7889 
+Building CXX object CMakeFiles/cmTC_a2d1e.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTC_a2d1e.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_a2d1e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a2d1e.dir/link.txt --verbose=1
+/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_a2d1e.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_a2d1e 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -251,9 +251,9 @@ Thread model: posix
 gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_d7889' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccwftsTc.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_d7889 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_d7889.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_d7889' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_a2d1e' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cc5vFj14.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_a2d1e /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_a2d1e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_a2d1e' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
 make[1]: Leaving directory '/home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp'
 
 
@@ -261,14 +261,14 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_d7889/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_d7889.dir/build.make CMakeFiles/cmTC_d7889.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_a2d1e/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_a2d1e.dir/build.make CMakeFiles/cmTC_a2d1e.dir/build]
   ignore line: [make[1]: Entering directory '/home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_d7889.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_d7889.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_d7889]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d7889.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_d7889.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_d7889 ]
+  ignore line: [Building CXX object CMakeFiles/cmTC_a2d1e.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_a2d1e.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_a2d1e]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a2d1e.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_a2d1e.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_a2d1e ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -280,13 +280,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_d7889' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccwftsTc.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_d7889 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_d7889.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_a2d1e' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cc5vFj14.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_a2d1e /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_a2d1e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccwftsTc.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc5vFj14.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -306,7 +306,7 @@ Parsed CXX implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_d7889] ==> ignore
+    arg [cmTC_a2d1e] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -318,7 +318,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_d7889.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_a2d1e.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -346,14 +346,14 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
 Change Dir: /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_1acbc/fast"
-/usr/bin/make -f CMakeFiles/cmTC_1acbc.dir/build.make CMakeFiles/cmTC_1acbc.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_ad41f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ad41f.dir/build.make CMakeFiles/cmTC_ad41f.dir/build
 make[1]: Entering directory '/home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_1acbc.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_1acbc.dir/feature_tests.cxx.o -c /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_1acbc
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1acbc.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_1acbc.dir/feature_tests.cxx.o  -o cmTC_1acbc 
+Building CXX object CMakeFiles/cmTC_ad41f.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_ad41f.dir/feature_tests.cxx.o -c /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_ad41f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ad41f.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_ad41f.dir/feature_tests.cxx.o  -o cmTC_ad41f 
 make[1]: Leaving directory '/home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp'
 
 
@@ -419,14 +419,14 @@ make[1]: Leaving directory '/home/notchla/Documents/Gravitar/nonGravitarUniBO/ex
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_7d1ea/fast"
-/usr/bin/make -f CMakeFiles/cmTC_7d1ea.dir/build.make CMakeFiles/cmTC_7d1ea.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_01e36/fast"
+/usr/bin/make -f CMakeFiles/cmTC_01e36.dir/build.make CMakeFiles/cmTC_01e36.dir/build
 make[1]: Entering directory '/home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_7d1ea.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_7d1ea.dir/feature_tests.cxx.o -c /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_7d1ea
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7d1ea.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_7d1ea.dir/feature_tests.cxx.o  -o cmTC_7d1ea 
+Building CXX object CMakeFiles/cmTC_01e36.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_01e36.dir/feature_tests.cxx.o -c /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_01e36
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_01e36.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_01e36.dir/feature_tests.cxx.o  -o cmTC_01e36 
 make[1]: Leaving directory '/home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp'
 
 
@@ -492,14 +492,14 @@ make[1]: Leaving directory '/home/notchla/Documents/Gravitar/nonGravitarUniBO/ex
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_05cbf/fast"
-/usr/bin/make -f CMakeFiles/cmTC_05cbf.dir/build.make CMakeFiles/cmTC_05cbf.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_72670/fast"
+/usr/bin/make -f CMakeFiles/cmTC_72670.dir/build.make CMakeFiles/cmTC_72670.dir/build
 make[1]: Entering directory '/home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_05cbf.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_05cbf.dir/feature_tests.cxx.o -c /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_05cbf
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_05cbf.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_05cbf.dir/feature_tests.cxx.o  -o cmTC_05cbf 
+Building CXX object CMakeFiles/cmTC_72670.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_72670.dir/feature_tests.cxx.o -c /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_72670
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_72670.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_72670.dir/feature_tests.cxx.o  -o cmTC_72670 
 make[1]: Leaving directory '/home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp'
 
 
@@ -565,14 +565,14 @@ make[1]: Leaving directory '/home/notchla/Documents/Gravitar/nonGravitarUniBO/ex
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_91ac2/fast"
-/usr/bin/make -f CMakeFiles/cmTC_91ac2.dir/build.make CMakeFiles/cmTC_91ac2.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_a1115/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a1115.dir/build.make CMakeFiles/cmTC_a1115.dir/build
 make[1]: Entering directory '/home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_91ac2.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_91ac2.dir/feature_tests.cxx.o -c /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_91ac2
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_91ac2.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_91ac2.dir/feature_tests.cxx.o  -o cmTC_91ac2 
+Building CXX object CMakeFiles/cmTC_a1115.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_a1115.dir/feature_tests.cxx.o -c /home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_a1115
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a1115.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_a1115.dir/feature_tests.cxx.o  -o cmTC_a1115 
 make[1]: Leaving directory '/home/notchla/Documents/Gravitar/nonGravitarUniBO/exe/CMakeFiles/CMakeTmp'
 
 
